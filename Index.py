@@ -15,10 +15,10 @@ st.write("# Welcome to Streamlit! 👋")
 st.sidebar.success("Select a demo above.")
 
 st.markdown(
-'''
-# Credit Application Dashboard
-- Customer Profile
-- Simulation 
+	'''
+	# Credit Application Dashboard
+	- Customer Profile
+	- Simulation 
 '''
 )
 
