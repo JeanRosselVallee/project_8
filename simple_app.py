@@ -27,6 +27,16 @@ st_print1 = st.text('Loading data...')		# STREAM: print Text
 data = load_data(10000)                 	# Load 10,000 rows
 st_print1.text('Loading data...done!')		
 
+# Markdown
+st.markdown(								# STREAM: MarkDown
+    """
+    **👈 Simple Streamlit app** to see some examples
+    of what Streamlit can do!
+    ### See more complex demos
+    - Explore a [New York City rideshare dataset](https://github.com/streamlit/demo-uber-nyc-pickups)
+"""
+)
+
 # Condition
 if st.checkbox('Show raw data'):			# STREAM: input Checkbox
 	
