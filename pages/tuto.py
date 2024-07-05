@@ -1,5 +1,5 @@
-
 # Init
+str_version = 'Version 0.0.1'
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -9,6 +9,8 @@ st.sidebar.title("About")
 st.sidebar.info("This multipage app template demonstrates various interactive web apps create")
 logo = "https://i.imgur.com/UbOXYAU.png"
 st.sidebar.image(logo)
+st.write(str_version)
+
 
 # Load data from URL
 DATE_COLUMN = 'date/time'
