@@ -26,8 +26,9 @@ def load_data(nrows):
     return data
 
 # Load data from file
-path_csv = './data/in/y_test_2'
-df_y = pd.read(path_csv)
+path_csv = './data/in/y_test_2.csv'
+try    : df_y = pd.read(path_csv)
+except : print('Could not open file', path_csv)
 st.subheader('df_y')				# STREAM: print Title
 st.write(df_y)					# STREAM: print Pandas
 
