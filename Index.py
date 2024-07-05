@@ -5,6 +5,8 @@ Main page of Streamlit app
 
 import streamlit as st
 
+st.set_page_config(layout="wide")
+
 st.set_page_config(
 	page_title="Hello",
 	page_icon="👋",
