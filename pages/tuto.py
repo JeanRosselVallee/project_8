@@ -4,6 +4,12 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
+# Left SideBar
+st.sidebar.title("About")
+st.sidebar.info("This multipage app template demonstrates various interactive web apps create")
+logo = "https://i.imgur.com/UbOXYAU.png"
+st.sidebar.image(logo)
+
 # Load data
 DATE_COLUMN = 'date/time'
 DATA_URL = ('https://s3-us-west-2.amazonaws.com/'
