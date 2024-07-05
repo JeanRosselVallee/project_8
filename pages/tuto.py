@@ -10,7 +10,7 @@ st.sidebar.info("This multipage app template demonstrates various interactive we
 logo = "https://i.imgur.com/UbOXYAU.png"
 st.sidebar.image(logo)
 
-# Load data
+# Load data from URL
 DATE_COLUMN = 'date/time'
 DATA_URL = ('https://s3-us-west-2.amazonaws.com/'
          'streamlit-demo-data/uber-raw-data-sep14.csv.gz')
@@ -22,6 +22,12 @@ def load_data(nrows):
     data.rename(lowercase, axis='columns', inplace=True)
     data[DATE_COLUMN] = pd.to_datetime(data[DATE_COLUMN])
     return data
+
+# Load data from file
+path_csv = './data/in/df_y_test'
+df_y = pd.read(path_csv)
+st.subheader('df_y')				# STREAM: print Title
+st.write(df_y)					# STREAM: print Pandas
 
 
 # Text
@@ -44,7 +50,7 @@ if st.checkbox('Show raw data'):			# STREAM: input Checkbox
 	
 # Table
 	st.subheader('Raw data')				# STREAM: print Title
-	st.write(data)							# STREAM: print Pandas
+	st.write(data)						# STREAM: print Pandas
 
 # Histogram
 st.subheader('Number of pickups by hour')	
