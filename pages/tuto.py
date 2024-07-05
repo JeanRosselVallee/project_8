@@ -9,7 +9,9 @@ st.sidebar.title("About")
 st.sidebar.info("This multipage app template demonstrates various interactive web apps create")
 logo = "https://i.imgur.com/UbOXYAU.png"
 st.sidebar.image(logo)
-st.write(str_version)
+st.sidebar.html('\
+    <hr> \
+    <p align="right">' + str_version + '</p>')
 
 
 # Load data from URL
@@ -27,11 +29,12 @@ def load_data(nrows):
 
 # Load data from file
 path_csv = './data/in/y_test_2.csv'
-try    : df_y = pd.read(path_csv)
-except : print('Could not open file', path_csv)
-st.subheader('df_y')				# STREAM: print Title
-st.write(df_y)					# STREAM: print Pandas
-
+try    : 
+    df_y = pd.read(path_csv, 10)
+    st.subheader('df_y')                # STREAM: print Title
+    st.write(df_y)                  # STREAM: print Pandas
+except : 
+    print('Could not open file', path_csv)
 
 # Text
 st_print1 = st.text('Loading data...')		# STREAM: print Text
