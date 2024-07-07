@@ -1,50 +1,67 @@
-# Init
+# Import Modules
 import streamlit as st
 import pandas as pd
 import numpy as np
 import sys
 import os
+import plotly.graph_objects as go
 
 sys.path.insert(0, os.path.abspath('./utils'))
-import my_functions as my
-my.print_debug('Version 0.0.2') 
+import my_functions as my		# Custom module	
 
+Notes = '''
+Current dir is project root's
+'''
+
+str_title = '👨‍🏫Dashboard'		# MetaData
+my.debug(str_title + ' - Version 0.0.2') 
+#st.title(str_title)             # STREAM: print Title
 str_author = 'Jean Vallée'
-str_title = '👨‍🏫Dashboard'
 
-st.title(str_title)                # STREAM: print Title
-
-# Debug
-current_dir = os.getcwd()
-my.print_debug(f'PWD={current_dir}')
+# Data
+## Features
+path_X = './data/in/X_simplified_4.csv'
+df_X = my.load_data(path_X, 10)	# Load
+## Target
+path_y = './data/in/y_train_2.csv'
+df_y = my.load_data(path_y, 10)
+df_y.columns = ['ref', 'class']
+## Join
+df_data = df_X.join(df_y, rsuffix='_todel')
+df_data.columns = ['ref', 'male', 'score_A', 'score_B', 'edu_level_2', 'edu_level_3', 'cash_loan', 'employee', 'request_id', 'class']
+df_data = df_data.drop('ref', axis='columns')
+df_data.set_index('request_id', inplace=True)
 
 # Left SideBar
 menu = st.sidebar
 menu.title(str_title)
 menu.info('Customer profile with main features')
 
-# Load Features
-path_csv = current_dir + '/data/in/X_simplified_4.csv'
-df_X = my.load_data(path_csv, 10)
-
 # Application Selection
 #if 'selectbox_request_key' not in st.session_state : st.session_state.selectbox_request_key = 0
-request_ref = df_X['ref'] #.drop_duplicates()
-selectbox_request = st.sidebar.selectbox(
-    "Credit Application", request_ref, index=0, key=5) #st.session_state.selectbox_request_key)
+ser_request_ids = df_data.index
+selected_ref = st.sidebar.selectbox('Credit Application', ser_request_ids, index=0) #st.session_state.selectbox_request_key)
 
+# Table of 2 columns
+frame_left, frame_right = st.columns([6, 4])
+
+# Display Selected Record
+selected_record = df_data.loc[[selected_ref]] 
+frame_left.dataframe(selected_record)#[li_features]) 	
+
+# Display Score Gauge
+frame_right.plotly_chart(my.plot_gauge(75), use_container_width=True)
+
+# Display All Targets
+bool_show_targets = st.checkbox('Show all targets')	# STREAM: input Checkbox
+if bool_show_targets :
+	st.subheader('df_y')            # STREAM: print Title
+	st.dataframe(df_y, hide_index=True)              # STREAM: print Pandas
+	
 menu.image('https://img.freepik.com/vecteurs-premium/icone-score-indicateur-credit-indique-niveau-solvabilite_485380-2529.jpg')
 menu.html(f'<hr> <p align="right">{str_author}</p>')
 
-# Load Targets
-path_csv = current_dir + '/data/in/y_train_2.csv'
-df_y = my.load_data(path_csv, 10)
 
-# Display Data
-st.subheader('df_y')                # STREAM: print Title
-st_text1 = st.text('Loading data...')      # STREAM: print Text
-st.write(df_y)                  # STREAM: print Pandas
-st_text1.text('Data loaded!')		
 
 # Markdown
 st.markdown(						# STREAM: MarkDown
@@ -55,13 +72,6 @@ st.markdown(						# STREAM: MarkDown
     - Explore a [New York City rideshare dataset](https://github.com/streamlit/demo-uber-nyc-pickups)
 """
 )
-
-# Condition
-if st.checkbox('Show raw data'):			# STREAM: input Checkbox
-	
-# Table
-	st.subheader('Raw data')				# STREAM: print Title
-	st.write(data)						# STREAM: print Pandas
 
 '''
 # Histogram

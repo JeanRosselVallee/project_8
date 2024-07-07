@@ -19,7 +19,7 @@ DATE_COLUMN = 'date/time'
 DATA_URL = ('https://s3-us-west-2.amazonaws.com/'
          'streamlit-demo-data/uber-raw-data-sep14.csv.gz')
 
-@st.cache_data								# STREAM: Cache Function's Results
+@st.cache_data						# STREAM: Cache Function's Results
 def load_data(nrows):
     data = pd.read_csv(DATA_URL, nrows=nrows)
     lowercase = lambda x: str(x).lower()
@@ -31,7 +31,7 @@ def load_data(nrows):
 path_csv = './data/in/y_test_2.csv'
 try    : 
     df_y = pd.read(path_csv, 10)
-    st.subheader('df_y')                # STREAM: print Title
+    st.subheader('df_y')            # STREAM: print Subtitle
     st.write(df_y)                  # STREAM: print Pandas
 except : 
     print('Could not open file', path_csv)
