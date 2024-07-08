@@ -30,7 +30,7 @@ def plot_gauge(n_curr) :
 		mode    = "gauge+number",
 		value   = n_curr,
 		number  = {'suffix': "%"},
-		domain  = {'x': [0, 1], 'y': [0, 0.8]},
+		domain  = {'x': [0, 1], 'y': [0, .8]},
 		gauge={'axis'     : {'range': [None, n_max], 'tickvals': li_markers, 'ticktext': li_labels},
 			   'bar'      : {'color': color_curr, 'thickness': 1},
 			   'threshold': {'line': {'color': 'black', 'width': 2}, 'thickness': 1, 'value': n_curr}
@@ -38,6 +38,6 @@ def plot_gauge(n_curr) :
 	)
 	layout     = go.Layout(
 		height=100,
-		margin=go.layout.Margin(l=2, r=200, b=2, t=2, pad=1)
+		margin=go.layout.Margin(l=2, r=2, b=2, t=2, pad=1)
 	)
 	return go.Figure(gauge, layout=layout)
