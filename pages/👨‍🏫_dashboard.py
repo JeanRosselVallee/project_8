@@ -1,11 +1,10 @@
-# Import Modules
+# Init
 import streamlit as st
 import pandas as pd
 import numpy as np
 import sys
 import os
 import plotly.graph_objects as go
-import subprocess
 import json
 
 sys.path.insert(0, os.path.abspath('./utils'))
@@ -41,36 +40,27 @@ selected_ref = st.sidebar.selectbox('Credit Application', ser_request_ids, index
 frame_left, frame_right = st.columns([3, 7])
 
 # Display Selected Record
-selected_record = df_data.loc[[selected_ref]] 
-frame_right.dataframe(selected_record) 	
+df_selected_record = df_data.loc[[selected_ref]] 
+df_record_to_display = df_selected_record.copy()
 
-# Get score
-def get_curl_command(df_sample, url) :
-    str_features_values = df_sample.to_json(orient='split')
-    str_data = '\'{"dataframe_split": ' + str_features_values + '}\' '
-    return 'curl -d' + str_data + '''-H 'Content-Type: application/json' -X POST ''' + url
+# Shortened fiedls' names
+li_old_features = list(df_selected_record.columns)
+li_new_features = ['male', 'score_A', 'score_B', 'edu_level_2', 'edu_level_3', 'cash_loan', 'employee']
+li_new_target   = ['class']
+li_new_variables= li_new_features + li_new_target
+df_record_to_display.columns = li_new_variables
+frame_right.dataframe(df_record_to_display) 	
 
-def get_li_scores(df_data) :
-    df_X = df_data.drop('class', axis='columns')
+# Get 1 score
+float_1_score = my.get_li_scores(df_selected_record)[0]
+#frame_left.write(str(float_1_score))
 
-    with open(dir_in + 'li_features.txt') as file_object:
-        str_li_original_features = file_object.read()
-        li_original_features = eval(str_li_original_features)
-
-    df_X.columns = li_original_features
-    str_curl = get_curl_command(df_X, 'localhost:5677/invocations')
-    str_dict_predictions = subprocess.run(str_curl, shell=True, stdout=subprocess.PIPE, text=True).stdout
-    frame_left.write(str_dict_predictions)
-    dict_predictions = eval(str_dict_predictions) # {"predictions": [0]}
-    li_predictions = dict_predictions['predictions']
-    return li_predictions
-
-li_float_scores = get_li_scores(df_data.iloc[:4])
-frame_left.write(str(li_float_scores))
+# Get scores' list
+#li_float_scores = my.get_li_scores(df_data.iloc[:4])
+#frame_left.write(str(li_float_scores))
 
 # Display Score Gauge
-float_score = li_float_scores[0]
-frame_left.plotly_chart(my.plot_gauge(100*float_score), use_container_width=True)
+frame_left.plotly_chart(my.plot_gauge(100*float_1_score), use_container_width=True)
 
 # Display All Data
 bool_show_targets = st.checkbox('Show all data')	# STREAM: input Checkbox
@@ -99,11 +89,41 @@ st.subheader('Number of pickups by hour')
 hist_values = np.histogram(					# Create Histogram
     data[DATE_COLUMN].dt.hour, bins=24, range=(0,24))[0] 
 st.bar_chart(hist_values)					# STREAM: plot Graph
+'''
 
-# Slicer
-hour_to_filter = st.slider('hour', 0, 23, 17)  # (min, max, default)
-filtered_data = data[data[DATE_COLUMN].dt.hour == hour_to_filter]
+# Display Simulated Score
+def display_simulated_score(idx_feature) :
+    new_value = eval('st.session_state.slider_value_' + str(idx_feature))
+    feature = li_old_features[idx_feature]
+    df_1_record = st.session_state['df_simulated_record'].copy()
+    df_1_record[feature] = new_value
+    my.debug(feature + '=' + str(new_value))
+    frame_left.dataframe(df_1_record, hide_index=True)  
+    float_1_score = my.get_li_scores(df_1_record)[0]
+    frame_left.plotly_chart(my.plot_gauge(100*float_1_score), use_container_width=True)
+    st.session_state['df_simulated_record'] = df_1_record.copy()
 
+# slider
+def plot_slider(feature_idx, frame_streamlit, val_default, val_min, val_max) :
+    value_out = frame_streamlit.slider(li_new_features[feature_idx], val_min, val_max,   # (min, max, default)
+                    val_default, on_change=display_simulated_score, args=[feature_idx],
+                    key='slider_value_' + str(feature_idx))
+    #return value_out
+
+df_simulated_record = df_selected_record.copy()
+
+li_features_float = my.get_1_type_cols_list(df_record_to_display, 'float64')
+for idx, feature_name in enumerate(li_new_features) :
+    default_value = df_record_to_display[feature_name].values[0]
+    if feature_name in li_features_float : min_value, max_value = 0.0, 1.0
+    else : min_value, max_value = 0, 1
+    #st.session_state['feature_name'] = feature_name
+    #st.session_state['df_simulated_record'] = df_simulated_record
+    plot_slider(idx, frame_right, default_value, min_value, max_value)
+
+
+
+'''
 # Map
 st.subheader(f'Map of all pickups at {hour_to_filter}:00')
 st.map(filtered_data)						# STREAM: plot Map

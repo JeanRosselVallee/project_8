@@ -2,16 +2,17 @@
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
+import subprocess
 
 # Debug Text
 def debug(str_debug) :
     st.markdown(f':red[DEBUG: {str_debug}]')
 
 # Load Data from File
-@st.cache_data								# STREAM: Cache Function's Results
+#@st.cache_data								# STREAM: Cache Function's Results
 def load_data(file, nb_rows):
     try    : 
-        df_contents = pd.read_csv(file, nrows=nb_rows).rename(columns={'Unnamed: 0': 'ref'}) 
+        df_contents = pd.read_csv(file, nrows=nb_rows).rename(columns={'Unnamed: 0': 'request_id'}) 
         #.drop('Unnamed: 0', axis='columns')
         return df_contents
     except Exception as e: 
@@ -23,8 +24,8 @@ def plot_gauge(n_curr) :
 	li_markers = [20, 40, 60, 80]
 	li_labels  = [str(n) for n in li_markers]
 	n_max      = 100
-	n_red      = n_curr / n_max
-	n_green    = 1 - n_red
+	n_green    = n_curr / n_max
+	n_red      = 1 - n_green
 	color_curr = f'rgb( {n_red}, {n_green},0)'
 	gauge = go.Indicator(
 		mode    = "gauge+number",
@@ -37,7 +38,26 @@ def plot_gauge(n_curr) :
 			   },
 	)
 	layout     = go.Layout(
-		height=100,
-		margin=go.layout.Margin(l=2, r=2, b=2, t=2, pad=1)
+		height = 100,
+		margin = go.layout.Margin(l=2, r=2, b=2, t=2, pad=1)
 	)
 	return go.Figure(gauge, layout=layout)
+
+# Get score
+def get_curl_command(df_sample, url) :
+    str_features_values  = df_sample.to_json(orient='split')
+    str_data             = '\'{"dataframe_split": ' + str_features_values + '}\' '
+    return 'curl -d' + str_data + '''-H 'Content-Type: application/json' -X POST ''' + url
+
+def get_li_scores(df_data_sample) :
+    df_X_sample          = df_data_sample.drop('TARGET', axis='columns')
+    str_curl             = get_curl_command(df_X_sample, 'localhost:5677/invocations')
+    str_dict_predictions = subprocess.run(str_curl, shell=True, stdout=subprocess.PIPE, text=True).stdout
+    dict_predictions     = eval(str_dict_predictions) # {"predictions": [0]}
+    li_predictions       = dict_predictions['predictions']
+    return li_predictions
+
+def get_1_type_cols_list(df_in, type_in) :
+    ''' Lists all columns in a Pandas of a given type '''
+    ser_cols_types = df_in.dtypes
+    return list(ser_cols_types[ser_cols_types==type_in].index)
