@@ -61,3 +61,22 @@ def get_1_type_cols_list(df_in, type_in) :
     ''' Lists all columns in a Pandas of a given type '''
     ser_cols_types = df_in.dtypes
     return list(ser_cols_types[ser_cols_types==type_in].index)
+
+# Slider's Callback Function : Display Simulated Score
+def display_simulated_score(idx_feature, li_features, frame) :
+    new_value = eval('st.session_state.slider_value_' + str(idx_feature))
+    feature = li_features[idx_feature]
+    df_1_record = st.session_state['df_simulated_record'].copy()
+    df_1_record[feature] = new_value
+    debug(feature + '=' + str(new_value))
+    frame.dataframe(df_1_record, hide_index=True)  
+    float_1_score = get_li_scores(df_1_record)[0]
+    frame.plotly_chart(plot_gauge(100*float_1_score), use_container_width=True)
+    st.session_state['df_simulated_record'] = df_1_record.copy()
+
+# slider
+def plot_slider(li_old_features, li_new_features, feature_idx, frame_slider, frame_gauge, val_default, val_min, val_max) :
+    value_out = frame_slider.slider(li_new_features[feature_idx], val_min, val_max,   # (min, max, default)
+                    val_default, on_change=display_simulated_score, args=[feature_idx, li_old_features, frame_gauge],
+                    key='slider_value_' + str(feature_idx))
+    #return value_out
