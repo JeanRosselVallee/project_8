@@ -13,8 +13,8 @@ flavors:
     serialization_format: cloudpickle
     sklearn_version: 1.5.0
 mlflow_version: 2.14.1
-model_size_bytes: 74472
-model_uuid: 7bc2272a8f1e4cfe963a9d4369c558c0
+model_size_bytes: 74447
+model_uuid: 0fd94b4d0654428fb74e78a2bcf8a8c9
 signature:
   inputs: '[{"type": "long", "name": "CODE_GENDER_M", "required": true}, {"type":
     "double", "name": "EXT_SOURCE_3", "required": true}, {"type": "double", "name":
@@ -24,4 +24,4 @@ signature:
     true}, {"type": "long", "name": "NAME_INCOME_TYPE_Working", "required": true}]'
   outputs: '[{"type": "long", "name": "TARGET", "required": true}]'
   params: null
-utc_time_created: '2024-07-09 09:03:51.522834'
+utc_time_created: '2024-07-09 11:58:34.008791'
