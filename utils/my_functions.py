@@ -96,7 +96,10 @@ def display_simulated_score(df_sample_1, idx_feature, li_features, frame) :
 	# st.write(feature + '=' + str(new_value))
 	frame.dataframe(df_1_record, hide_index=True)  
 	float_1_score = get_li_scores(df_1_record)[0]
-	frame.plotly_chart(plot_gauge(100*float_1_score), use_container_width=True)
+	frame.html('<hr><h4 align="center">Class "1"</h4>')
+	frame.plotly_chart(plot_gauge(100*float_1_score, class_1=True), use_container_width=True)
+	frame.html('<hr><h4 align="center">Class "0"</h4>')
+	frame.plotly_chart(plot_gauge(100*float_1_score, class_1=False), use_container_width=True)
 	st.session_state['df_simulated_record'] = df_1_record.copy()
 
 # slider
