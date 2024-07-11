@@ -2,313 +2,604 @@
   You can now view your Streamlit app in your browser.
 
   Local URL: http://localhost:8501
-  Network URL: http://192.168.1.108:8501
+  Network URL: http://192.168.1.107:8501
 
-curl: (3) nested brace in URL position 10:
-{columns:[CODE_GENDER_M,EXT_SOURCE_3,EXT_SOURCE_2,NAME_EDUCATION_TYPE_Secondary_or_secondary_special,NAME_EDUCATION_TYPE_Higher_education,NAME_CONTRACT_TYPE_Cash_loans,NAME_INCOME_TYPE_Working],index:[1],data:[[0,0.5108529062,0.6222457753,0,1,1,0]]}}'
-         ^
-2024-07-11 12:17:57.593 Uncaught app exception
-Traceback (most recent call last):
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 589, in _run_script
-    exec(code, module.__dict__)
-  File "C:\Users\Jean\OCR\git\project_8\pages\\u2b50_Global_Feature_Importance.py", line 59, in <module>
-    float_1_score = my.get_li_scores(df_selected_record)[0]
-  File "C:\Users\Jean\OCR\git\project_8\utils\my_functions.py", line 67, in get_li_scores
-    dict_predictions	 = eval(str_dict_predictions) # {"predictions": [0]}
-  File "<string>", line 0
-    
-SyntaxError: invalid syntax
-curl: (3) nested brace in URL position 10:
-{columns:[CODE_GENDER_M,EXT_SOURCE_3,EXT_SOURCE_2,NAME_EDUCATION_TYPE_Secondary_or_secondary_special,NAME_EDUCATION_TYPE_Higher_education,NAME_CONTRACT_TYPE_Cash_loans,NAME_INCOME_TYPE_Working],index:[1],data:[[0,0.5108529062,0.6222457753,0,1,1,0]]}}'
-         ^
-2024-07-11 12:20:07.345 Uncaught app exception
-Traceback (most recent call last):
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 589, in _run_script
-    exec(code, module.__dict__)
-  File "C:\Users\Jean\OCR\git\project_8\pages\\u2b50_Global_Feature_Importance.py", line 59, in <module>
-    float_1_score = my.get_li_scores(df_selected_record)[0]
-  File "C:\Users\Jean\OCR\git\project_8\utils\my_functions.py", line 66, in get_li_scores
-    debug('str_dict_predictions=[' + ']')
-  File "C:\Users\Jean\OCR\git\project_8\utils\my_functions.py", line 14, in debug
-    with open('./log/streamlit_app.log', 'a') as f:
-PermissionError: [Errno 13] Permission denied: './log/streamlit_app.log'
-2024-07-11 12:29:31.224 Uncaught app exception
-Traceback (most recent call last):
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 589, in _run_script
-    exec(code, module.__dict__)
-  File "C:\Users\Jean\OCR\git\project_8\pages\\U0001f468\u200d\U0001f3eb_dashboard.py", line 22, in <module>
-    my.debug(str_title + ' - Version 0.0.2')
-  File "C:\Users\Jean\OCR\git\project_8\utils\my_functions.py", line 14, in debug
-    with open('./log/streamlit_app.log', 'a') as f:
-PermissionError: [Errno 13] Permission denied: './log/streamlit_app.log'
-2024-07-11 12:29:32.486 Uncaught app exception
-Traceback (most recent call last):
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 589, in _run_script
-    exec(code, module.__dict__)
-  File "C:\Users\Jean\OCR\git\project_8\pages\\U0001f3b0_simulation.py", line 18, in <module>
-    my.debug(str_title + ' - Version 0.0.2')
-  File "C:\Users\Jean\OCR\git\project_8\utils\my_functions.py", line 14, in debug
-    with open('./log/streamlit_app.log', 'a') as f:
-PermissionError: [Errno 13] Permission denied: './log/streamlit_app.log'
-2024-07-11 12:29:38.713 Uncaught app exception
-Traceback (most recent call last):
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 589, in _run_script
-    exec(code, module.__dict__)
-  File "C:\Users\Jean\OCR\git\project_8\pages\\U0001f3b0_simulation.py", line 18, in <module>
-    my.debug(str_title + ' - Version 0.0.2')
-  File "C:\Users\Jean\OCR\git\project_8\utils\my_functions.py", line 14, in debug
-    with open('./log/streamlit_app.log', 'a') as f:
-PermissionError: [Errno 13] Permission denied: './log/streamlit_app.log'
-2024-07-11 12:29:39.912 Uncaught app exception
-Traceback (most recent call last):
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 589, in _run_script
-    exec(code, module.__dict__)
-  File "C:\Users\Jean\OCR\git\project_8\pages\\U0001f468\u200d\U0001f3eb_dashboard.py", line 22, in <module>
-    my.debug(str_title + ' - Version 0.0.2')
-  File "C:\Users\Jean\OCR\git\project_8\utils\my_functions.py", line 14, in debug
-    with open('./log/streamlit_app.log', 'a') as f:
-PermissionError: [Errno 13] Permission denied: './log/streamlit_app.log'
-2024-07-11 12:29:43.512 Uncaught app exception
-Traceback (most recent call last):
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 589, in _run_script
-    exec(code, module.__dict__)
-  File "C:\Users\Jean\OCR\git\project_8\pages\\U0001f3b0_simulation.py", line 18, in <module>
-    my.debug(str_title + ' - Version 0.0.2')
-  File "C:\Users\Jean\OCR\git\project_8\utils\my_functions.py", line 14, in debug
-    with open('./log/streamlit_app.log', 'a') as f:
-PermissionError: [Errno 13] Permission denied: './log/streamlit_app.log'
-curl: (3) nested brace in URL position 10:
-{columns:[CODE_GENDER_M,EXT_SOURCE_3,EXT_SOURCE_2,NAME_EDUCATION_TYPE_Secondary_or_secondary_special,NAME_EDUCATION_TYPE_Higher_education,NAME_CONTRACT_TYPE_Cash_loans,NAME_INCOME_TYPE_Working],index:[1],data:[[0,0.5108529062,0.6222457753,0,1,1,0]]}}'
-         ^
-2024-07-11 12:29:45.987 Uncaught app exception
-Traceback (most recent call last):
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 589, in _run_script
-    exec(code, module.__dict__)
-  File "C:\Users\Jean\OCR\git\project_8\pages\\u2b50_Global_Feature_Importance.py", line 59, in <module>
-    float_1_score = my.get_li_scores(df_selected_record)[0]
-  File "C:\Users\Jean\OCR\git\project_8\utils\my_functions.py", line 66, in get_li_scores
-    debug('str_dict_predictions=[' + ']')
-  File "C:\Users\Jean\OCR\git\project_8\utils\my_functions.py", line 14, in debug
-    with open('./log/streamlit_app.log', 'a') as f:
-PermissionError: [Errno 13] Permission denied: './log/streamlit_app.log'
-curl: (3) nested brace in URL position 10:
-{columns:[CODE_GENDER_M,EXT_SOURCE_3,EXT_SOURCE_2,NAME_EDUCATION_TYPE_Secondary_or_secondary_special,NAME_EDUCATION_TYPE_Higher_education,NAME_CONTRACT_TYPE_Cash_loans,NAME_INCOME_TYPE_Working],index:[1],data:[[0,0.5108529062,0.6222457753,0,1,1,0]]}}'
-         ^
-2024-07-11 12:31:31.553 Uncaught app exception
-Traceback (most recent call last):
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 589, in _run_script
-    exec(code, module.__dict__)
-  File "C:\Users\Jean\OCR\git\project_8\pages\\u2b50_Global_Feature_Importance.py", line 59, in <module>
-    float_1_score = my.get_li_scores(df_selected_record)[0]
-  File "C:\Users\Jean\OCR\git\project_8\utils\my_functions.py", line 68, in get_li_scores
-    dict_predictions	 = eval(str_dict_predictions) # {"predictions": [0]}
-  File "<string>", line 0
-    
-SyntaxError: invalid syntax
-curl: (3) nested brace in URL position 10:
-{columns:[CODE_GENDER_M,EXT_SOURCE_3,EXT_SOURCE_2,NAME_EDUCATION_TYPE_Secondary_or_secondary_special,NAME_EDUCATION_TYPE_Higher_education,NAME_CONTRACT_TYPE_Cash_loans,NAME_INCOME_TYPE_Working],index:[1],data:[[0,0.5108529062,0.6222457753,0,1,1,0]]}}'
-         ^
-2024-07-11 12:32:46.900 Uncaught app exception
-Traceback (most recent call last):
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 589, in _run_script
-    exec(code, module.__dict__)
-  File "C:\Users\Jean\OCR\git\project_8\pages\\u2b50_Global_Feature_Importance.py", line 59, in <module>
-    float_1_score = my.get_li_scores(df_selected_record)[0]
-  File "C:\Users\Jean\OCR\git\project_8\utils\my_functions.py", line 68, in get_li_scores
-    dict_predictions	 = eval(str_dict_predictions) # {"predictions": [0]}
-  File "<string>", line 0
-    
-SyntaxError: invalid syntax
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290   2896  22705 --:--:-- --:--:-- --:--:-- 27250
-C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\shap\plots\_beeswarm.py:952: UserWarning:
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290   1423  11153 --:--:-- --:--:-- --:--:-- 12576
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_beeswarm.py:952: UserWarning:
 
 FigureCanvasAgg is non-interactive, and thus cannot be shown
 
-2024-07-11 12:57:36.402 Uncaught app exception
-Traceback (most recent call last):
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 589, in _run_script
-    exec(code, module.__dict__)
-  File "C:\Users\Jean\OCR\git\project_8\pages\\u2b50_Global_Feature_Importance.py", line 59, in <module>
-    float_1_score = my.get_li_scores(df_selected_record)[0]
-  File "C:\Users\Jean\OCR\git\project_8\utils\my_functions.py", line 65, in get_li_scores
-    st.write('os.system =[' + os.system + ']')
-NameError: name 'os' is not defined
-2024-07-11 12:57:51.414 Uncaught app exception
-Traceback (most recent call last):
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 589, in _run_script
-    exec(code, module.__dict__)
-  File "C:\Users\Jean\OCR\git\project_8\pages\\u2b50_Global_Feature_Importance.py", line 59, in <module>
-    float_1_score = my.get_li_scores(df_selected_record)[0]
-  File "C:\Users\Jean\OCR\git\project_8\utils\my_functions.py", line 67, in get_li_scores
-    st.write('os.system =[' + os.system + ']')
-TypeError: can only concatenate str (not "builtin_function_or_method") to str
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290   3899  30561 --:--:-- --:--:-- --:--:-- 36333
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290   2227  17457 --:--:-- --:--:-- --:--:-- 20437
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290   2069  16221 --:--:-- --:--:-- --:--:-- 19235
-2024-07-11 13:02:11.136 Uncaught app exception
-Traceback (most recent call last):
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 589, in _run_script
-    exec(code, module.__dict__)
-  File "C:\Users\Jean\OCR\git\project_8\pages\\U0001f468\u200d\U0001f3eb_dashboard.py", line 22, in <module>
-    my.debug(str_title + ' - Version 0.0.2')
-  File "C:\Users\Jean\OCR\git\project_8\utils\my_functions.py", line 15, in debug
-    with open('./log/streamlit_app.log', 'a') as f:
-PermissionError: [Errno 13] Permission denied: './log/streamlit_app.log'
-2024-07-11 13:02:13.398 Uncaught app exception
-Traceback (most recent call last):
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 589, in _run_script
-    exec(code, module.__dict__)
-  File "C:\Users\Jean\OCR\git\project_8\pages\\U0001f468\u200d\U0001f3eb_dashboard.py", line 22, in <module>
-    my.debug(str_title + ' - Version 0.0.2')
-  File "C:\Users\Jean\OCR\git\project_8\utils\my_functions.py", line 15, in debug
-    with open('./log/streamlit_app.log', 'a') as f:
-PermissionError: [Errno 13] Permission denied: './log/streamlit_app.log'
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290   1540  12076 --:--:-- --:--:-- --:--:-- 14217
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 88   330    0     0  100   293      0  14425 --:--:-- --:--:-- --:--:-- 13952100   330  100    37  100   293   1774  14054 --:--:-- --:--:-- --:--:-- 15714
-C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\shap\plots\_waterfall.py:315: UserWarning:
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   330  100    37  100   293    480   3805 --:--:-- --:--:-- --:--:--  4285
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_waterfall.py:315: UserWarning:
 
 FigureCanvasAgg is non-interactive, and thus cannot be shown
 
-2024-07-11 13:04:22.754 Uncaught app exception
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290   1423  11153 --:--:-- --:--:-- --:--:-- 12576
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   330  100    37  100   293    740   5860 --:--:-- --:--:-- --:--:--  6600
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_waterfall.py:315: UserWarning:
+
+FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290    637   5000 --:--:-- --:--:-- --:--:--  5637
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_beeswarm.py:952: UserWarning:
+
+FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_waterfall.py:315: UserWarning:
+
+FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290    637   5000 --:--:-- --:--:-- --:--:--  5637
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_waterfall.py:315: UserWarning:
+
+FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290   1608  12608 --:--:-- --:--:-- --:--:-- 14217
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_waterfall.py:315: UserWarning:
+
+FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290    637   5000 --:--:-- --:--:-- --:--:--  5637
+2024-07-11 14:01:22.485 Uncaught app exception
 Traceback (most recent call last):
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 589, in _run_script
+  File "/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 589, in _run_script
     exec(code, module.__dict__)
-  File "C:\Users\Jean\OCR\git\project_8\pages\\U0001f3b0_simulation.py", line 18, in <module>
-    my.debug(str_title + ' - Version 0.0.2')
-  File "C:\Users\Jean\OCR\git\project_8\utils\my_functions.py", line 15, in debug
-    with open('./log/streamlit_app.log', 'a') as f:
-PermissionError: [Errno 13] Permission denied: './log/streamlit_app.log'
-2024-07-11 13:04:40.994 Uncaught app exception
+  File "/home/user_n/Documents/Dev/git/project_8/pages/🎯_Local_Feature_Importance.py", line 89, in <module>
+    get_waterfall_image()
+  File "/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/streamlit/runtime/caching/cache_utils.py", line 168, in wrapper
+    return cached_func(*args, **kwargs)
+  File "/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/streamlit/runtime/caching/cache_utils.py", line 197, in __call__
+    return self._get_or_create_cached_value(args, kwargs)
+  File "/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/streamlit/runtime/caching/cache_utils.py", line 224, in _get_or_create_cached_value
+    return self._handle_cache_miss(cache, value_key, func_args, func_kwargs)
+  File "/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/streamlit/runtime/caching/cache_utils.py", line 280, in _handle_cache_miss
+    computed_value = self._info.func(*func_args, **func_kwargs)
+  File "/home/user_n/Documents/Dev/git/project_8/pages/🎯_Local_Feature_Importance.py", line 85, in get_waterfall_image
+    explainer_X = load_explainer()
+NameError: name 'load_explainer' is not defined
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290    685   5370 --:--:-- --:--:-- --:--:--  6055
+2024-07-11 14:01:56.325 Uncaught app exception
 Traceback (most recent call last):
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 589, in _run_script
+  File "/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 589, in _run_script
     exec(code, module.__dict__)
-  File "C:\Users\Jean\OCR\git\project_8\pages\\U0001f3b0_simulation.py", line 28, in <module>
-    df_data.set_index('request_id', inplace=True)
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\pandas\core\frame.py", line 6122, in set_index
-    raise KeyError(f"None of {missing} are in the columns")
-KeyError: "None of ['request_id'] are in the columns"
+  File "/home/user_n/Documents/Dev/git/project_8/pages/🎯_Local_Feature_Importance.py", line 96, in <module>
+    get_waterfall_image()
+  File "/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/streamlit/runtime/caching/cache_utils.py", line 168, in wrapper
+    return cached_func(*args, **kwargs)
+  File "/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/streamlit/runtime/caching/cache_utils.py", line 197, in __call__
+    return self._get_or_create_cached_value(args, kwargs)
+  File "/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/streamlit/runtime/caching/cache_utils.py", line 224, in _get_or_create_cached_value
+    return self._handle_cache_miss(cache, value_key, func_args, func_kwargs)
+  File "/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/streamlit/runtime/caching/cache_utils.py", line 280, in _handle_cache_miss
+    computed_value = self._info.func(*func_args, **func_kwargs)
+  File "/home/user_n/Documents/Dev/git/project_8/pages/🎯_Local_Feature_Importance.py", line 93, in get_waterfall_image
+    shap.plots.waterfall(explainer_X[row_number])
+NameError: name 'row_number' is not defined
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   330  100    37  100   293   2720  21547 --:--:-- --:--:-- --:--:-- 25384
-2024-07-11 13:05:50.588 Uncaught app exception
-Traceback (most recent call last):
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\state\session_state.py", line 408, in __getitem__
-    return self._getitem(widget_id, key)
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\state\session_state.py", line 453, in _getitem
-    raise KeyError
-KeyError
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   290    0     0  100   290      0  10357 --:--:-- --:--:-- --:--:-- 10000100   327  100    37  100   290    755   5918 --:--:-- --:--:-- --:--:--  6540
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_waterfall.py:315: UserWarning:
 
-During handling of the above exception, another exception occurred:
+FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_waterfall.py:315: UserWarning:
+
+FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290    804   6304 --:--:-- --:--:-- --:--:--  7108
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_waterfall.py:315: UserWarning:
+
+FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_waterfall.py:315: UserWarning:
+
+FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290    660   5178 --:--:-- --:--:-- --:--:--  5945
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_waterfall.py:315: UserWarning:
+
+FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_waterfall.py:315: UserWarning:
+
+FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290   1057   8285 --:--:-- --:--:-- --:--:--  9617
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_waterfall.py:315: UserWarning:
+
+FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290   1370  10740 --:--:-- --:--:-- --:--:-- 12111
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_waterfall.py:315: UserWarning:
+
+FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290    672   5272 --:--:-- --:--:-- --:--:--  5945
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_waterfall.py:315: UserWarning:
+
+FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290    606   4754 --:--:-- --:--:-- --:--:--  5360
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_waterfall.py:315: UserWarning:
+
+FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290   1275  10000 --:--:-- --:--:-- --:--:-- 11275
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_waterfall.py:315: UserWarning:
+
+FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290   1156   9062 --:--:-- --:--:-- --:--:-- 10218
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_waterfall.py:315: UserWarning:
+
+FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290    973   7631 --:--:-- --:--:-- --:--:--  8605
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_waterfall.py:315: UserWarning:
+
+FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290   1541  12083 --:--:-- --:--:-- --:--:-- 14217
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_waterfall.py:315: UserWarning:
+
+FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290   1681  13181 --:--:-- --:--:-- --:--:-- 14863
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_waterfall.py:315: UserWarning:
+
+FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290    973   7631 --:--:-- --:--:-- --:--:--  8837
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_waterfall.py:315: UserWarning:
+
+FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290    860   6744 --:--:-- --:--:-- --:--:--  7604
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_waterfall.py:315: UserWarning:
+
+FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   328  100    37  100   291   1193   9387 --:--:-- --:--:-- --:--:-- 10580
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_waterfall.py:315: UserWarning:
+
+FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   328  100    37  100   291    948   7461 --:--:-- --:--:-- --:--:--  8410
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_waterfall.py:315: UserWarning:
+
+FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   328  100    37  100   291    860   6767 --:--:-- --:--:-- --:--:--  7627
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_waterfall.py:315: UserWarning:
+
+FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   328  100    37  100   291   2055  16166 --:--:-- --:--:-- --:--:-- 18222
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_waterfall.py:315: UserWarning:
+
+FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   328  100    37  100   291   1608  12652 --:--:-- --:--:-- --:--:-- 14260
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_waterfall.py:315: UserWarning:
+
+FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   328  100    37  100   291    902   7097 --:--:-- --:--:-- --:--:--  8000
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_waterfall.py:315: UserWarning:
+
+FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   328  100    37  100   291    649   5105 --:--:-- --:--:-- --:--:--  5754
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_waterfall.py:315: UserWarning:
+
+FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   328  100    37  100   291   1541  12125 --:--:-- --:--:-- --:--:-- 13666
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_waterfall.py:315: UserWarning:
+
+FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   328  100    37  100   291    804   6326 --:--:-- --:--:-- --:--:--  7130
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_waterfall.py:315: UserWarning:
+
+FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   328  100    37  100   291    770   6062 --:--:-- --:--:-- --:--:--  6833
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_waterfall.py:315: UserWarning:
+
+FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   328  100    37  100   291   1121   8818 --:--:-- --:--:-- --:--:--  9939
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_waterfall.py:315: UserWarning:
+
+FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   328  100    37  100   291   1850  14550 --:--:-- --:--:-- --:--:-- 17263
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_waterfall.py:315: UserWarning:
+
+FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   328  100    37  100   291   1000   7864 --:--:-- --:--:-- --:--:--  8631
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_waterfall.py:315: UserWarning:
+
+FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   328  100    37  100   291    698   5490 --:--:-- --:--:-- --:--:--  6188
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_waterfall.py:315: UserWarning:
+
+FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   328  100    37  100   291    880   6928 --:--:-- --:--:-- --:--:--  7809
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_waterfall.py:315: UserWarning:
+
+FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   330  100    37  100   293    660   5232 --:--:-- --:--:-- --:--:--  5892
+/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/shap/plots/_waterfall.py:315: UserWarning:
+
+FigureCanvasAgg is non-interactive, and thus cannot be shown
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290   1156   9062 --:--:-- --:--:-- --:--:-- 10218
+2024-07-11 14:41:45.753 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 589, in _run_script
+    exec(code, module.__dict__)
+  File "/home/user_n/Documents/Dev/git/project_8/pages/🔔_Distribution_A_B.py", line 77, in <module>
+    li_request_ids = li_old_features
+NameError: name 'li_old_features' is not defined. Did you mean: 'li_new_features'?
+2024-07-11 14:42:29.797 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 589, in _run_script
+    exec(code, module.__dict__)
+  File "/home/user_n/Documents/Dev/git/project_8/pages/🔔_Distribution_A_B.py", line 27, in <module>
+    li_old_features = list(df_selected_record.columns)
+NameError: name 'df_selected_record' is not defined
+2024-07-11 14:43:35.654 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 589, in _run_script
+    exec(code, module.__dict__)
+  File "/home/user_n/Documents/Dev/git/project_8/pages/🔔_Distribution_A_B.py", line 27, in <module>
+    li_old_features = list(df_X.head(1).columns)
+NameError: name 'df_X' is not defined
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290   1608  12608 --:--:-- --:--:-- --:--:-- 14217
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290    627   4915 --:--:-- --:--:-- --:--:--  5637
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290    725   5686 --:--:-- --:--:-- --:--:--  6411
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290   1480  11600 --:--:-- --:--:-- --:--:-- 13080
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   328  100    37  100   291   1088   8558 --:--:-- --:--:-- --:--:--  9647
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   328  100    37  100   291    755   5938 --:--:-- --:--:-- --:--:--  6693
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   328  100    37  100   291   1121   8818 --:--:-- --:--:-- --:--:--  9939
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   328  100    37  100   291   1275  10034 --:--:-- --:--:-- --:--:-- 11310
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   328  100    37  100   291   1321  10392 --:--:-- --:--:-- --:--:-- 11714
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   328  100    37  100   291    536   4217 --:--:-- --:--:-- --:--:--  4753
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   328  100    37  100   291   1156   9093 --:--:-- --:--:-- --:--:-- 10250
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290    627   4915 --:--:-- --:--:-- --:--:--  5542
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290    840   6590 --:--:-- --:--:-- --:--:--  7431
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290    948   7435 --:--:-- --:--:-- --:--:--  8605
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290    544   4264 --:--:-- --:--:-- --:--:--  4808
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290   1423  11153 --:--:-- --:--:-- --:--:-- 13080
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290   1321  10357 --:--:-- --:--:-- --:--:-- 11678
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290    637   5000 --:--:-- --:--:-- --:--:--  5637
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290    755   5918 --:--:-- --:--:-- --:--:--  6673
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   330  100    37  100   293    840   6659 --:--:-- --:--:-- --:--:--  7500
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290   1480  11600 --:--:-- --:--:-- --:--:-- 13080
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290    660   5178 --:--:-- --:--:-- --:--:--  5839
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290    973   7631 --:--:-- --:--:-- --:--:--  8605
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   330  100    37  100   293   2846  22538 --:--:-- --:--:-- --:--:-- 25384
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290   1233   9666 --:--:-- --:--:-- --:--:-- 10900
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290    770   6041 --:--:-- --:--:-- --:--:--  6812
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290    698   5471 --:--:-- --:--:-- --:--:--  6169
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   330  100    37  100   293   1027   8138 --:--:-- --:--:-- --:--:--  9428
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290   1480  11600 --:--:-- --:--:-- --:--:-- 13080
+2024-07-11 15:25:36.434 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'CODE_GENDER_M'
+
+The above exception was the direct cause of the following exception:
 
 Traceback (most recent call last):
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 567, in _run_script
+  File "/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 589, in _run_script
+    exec(code, module.__dict__)
+  File "/home/user_n/Documents/Dev/git/project_8/pages/🏆_Simulation.py", line 112, in <module>
+    default_value = df_record_to_display[feature_name].values[0]
+  File "/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/pandas/core/frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'CODE_GENDER_M'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290   1947  15263 --:--:-- --:--:-- --:--:-- 17210
+2024-07-11 15:27:40.976 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'male'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 589, in _run_script
+    exec(code, module.__dict__)
+  File "/home/user_n/Documents/Dev/git/project_8/pages/🏆_Simulation.py", line 97, in <module>
+    x_curr  = df_selected_record[feature].values[0]
+  File "/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/pandas/core/frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'male'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290    755   5918 --:--:-- --:--:-- --:--:--  6673
+2024-07-11 15:28:04.142 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'CODE_GENDER_M'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 589, in _run_script
+    exec(code, module.__dict__)
+  File "/home/user_n/Documents/Dev/git/project_8/pages/🏆_Simulation.py", line 112, in <module>
+    default_value = df_record_to_display[feature_name].values[0]
+  File "/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/pandas/core/frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'CODE_GENDER_M'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290   1480  11600 --:--:-- --:--:-- --:--:-- 13080
+2024-07-11 15:37:03.800 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 589, in _run_script
+    exec(code, module.__dict__)
+  File "/home/user_n/Documents/Dev/git/project_8/pages/🏆_Simulation.py", line 92, in <module>
+    li_selected_features_idx = [li_old_features.idx(str_feature_A), li_old_features.idx(str_feature_B)]
+AttributeError: 'list' object has no attribute 'idx'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290   1761  13809 --:--:-- --:--:-- --:--:-- 15571
+2024-07-11 15:37:33.031 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 589, in _run_script
+    exec(code, module.__dict__)
+  File "/home/user_n/Documents/Dev/git/project_8/pages/🏆_Simulation.py", line 123, in <module>
+    my.plot_slider(df_simulated_record, li_old_features, li_new_features, idx, frame_right, frame_left, default_value, min_value, max_value)
+NameError: name 'df_simulated_record' is not defined. Did you mean: 'df_selected_record'?
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290    660   5178 --:--:-- --:--:-- --:--:--  5839
+2024-07-11 15:38:12.929 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 589, in _run_script
+    exec(code, module.__dict__)
+  File "/home/user_n/Documents/Dev/git/project_8/pages/🏆_Simulation.py", line 123, in <module>
+    my.plot_slider(df_simulated_record, li_old_features, li_new_features, idx, frame_right, frame_left, default_value, min_value, max_value)
+NameError: name 'frame_right' is not defined
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290   1156   9062 --:--:-- --:--:-- --:--:-- 10548
+2024-07-11 15:38:59.495 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 589, in _run_script
+    exec(code, module.__dict__)
+  File "/home/user_n/Documents/Dev/git/project_8/pages/🏆_Simulation.py", line 123, in <module>
+    my.plot_slider(df_simulated_record, li_old_features, li_new_features, idx, frame_R, frame_L, default_value, min_value, max_value)
+  File "/home/user_n/Documents/Dev/git/project_8/utils/my_functions.py", line 104, in plot_slider
+    value_out = frame_slider.slider(li_new_features[feature_idx], val_min, val_max,   # (min, max, default)
+  File "/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/streamlit/runtime/metrics_util.py", line 408, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/streamlit/elements/widgets/slider.py", line 336, in slider
+    return self._slider(
+  File "/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/streamlit/elements/widgets/slider.py", line 534, in _slider
+    raise StreamlitAPIException(
+streamlit.errors.StreamlitAPIException: Slider value arguments must be of matching types.
+`min_value` has int type.
+`max_value` has int type.
+`step` has float type.
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290    685   5370 --:--:-- --:--:-- --:--:--  6169
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290   1057   8285 --:--:-- --:--:-- --:--:--  9342
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   319  100    37  100   282    672   5127 --:--:-- --:--:-- --:--:--  5800
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290   1370  10740 --:--:-- --:--:-- --:--:-- 12111
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290   1321  10357 --:--:-- --:--:-- --:--:-- 12111
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   319  100    37  100   282    660   5035 --:--:-- --:--:-- --:--:--  5696
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290   1193   9354 --:--:-- --:--:-- --:--:-- 10548
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290   1423  11153 --:--:-- --:--:-- --:--:-- 12576
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   319  100    37  100   282   1608  12260 --:--:-- --:--:-- --:--:-- 13869
+2024-07-11 15:46:38.613 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 567, in _run_script
     self._session_state.on_script_will_rerun(
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\state\safe_session_state.py", line 66, in on_script_will_rerun
+  File "/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/streamlit/runtime/state/safe_session_state.py", line 66, in on_script_will_rerun
     self._state.on_script_will_rerun(latest_widget_states)
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\state\session_state.py", line 514, in on_script_will_rerun
+  File "/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/streamlit/runtime/state/session_state.py", line 514, in on_script_will_rerun
     self._call_callbacks()
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\state\session_state.py", line 527, in _call_callbacks
+  File "/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/streamlit/runtime/state/session_state.py", line 527, in _call_callbacks
     self._new_widget_state.call_callback(wid)
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\state\session_state.py", line 271, in call_callback
+  File "/home/user_n/anaconda3/envs/env_proj_8/lib/python3.10/site-packages/streamlit/runtime/state/session_state.py", line 271, in call_callback
     callback(*args, **kwargs)
-  File "C:\Users\Jean\OCR\git\project_8\utils\my_functions.py", line 86, in display_simulated_score
-    df_1_record = st.session_state['df_simulated_record'].copy()
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\state\session_state_proxy.py", line 98, in __getitem__
-    return get_session_state()[key]
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\state\safe_session_state.py", line 94, in __getitem__
-    return self._state[key]
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\state\session_state.py", line 410, in __getitem__
-    raise KeyError(_missing_key_error_message(key))
-KeyError: 'st.session_state has no key "df_simulated_record". Did you forget to initialize it? More info: https://docs.streamlit.io/develop/concepts/architecture/session-state#initialization'
+  File "/home/user_n/Documents/Dev/git/project_8/utils/my_functions.py", line 99, in display_simulated_score
+    menu.html('<hr><h3 align="center">Score Class "1"</h3>')
+NameError: name 'menu' is not defined
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   330  100    37  100   293    871   6904 --:--:-- --:--:-- --:--:--  7857
-2024-07-11 13:19:27.911 Uncaught app exception
-Traceback (most recent call last):
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\state\session_state.py", line 408, in __getitem__
-    return self._getitem(widget_id, key)
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\state\session_state.py", line 453, in _getitem
-    raise KeyError
-KeyError
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 567, in _run_script
-    self._session_state.on_script_will_rerun(
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\state\safe_session_state.py", line 66, in on_script_will_rerun
-    self._state.on_script_will_rerun(latest_widget_states)
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\state\session_state.py", line 514, in on_script_will_rerun
-    self._call_callbacks()
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\state\session_state.py", line 527, in _call_callbacks
-    self._new_widget_state.call_callback(wid)
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\state\session_state.py", line 271, in call_callback
-    callback(*args, **kwargs)
-  File "C:\Users\Jean\OCR\git\project_8\utils\my_functions.py", line 87, in display_simulated_score
-    df_1_record = st.session_state['df_simulated_record'].copy()
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\state\session_state_proxy.py", line 98, in __getitem__
-    return get_session_state()[key]
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\state\safe_session_state.py", line 94, in __getitem__
-    return self._state[key]
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\state\session_state.py", line 410, in __getitem__
-    raise KeyError(_missing_key_error_message(key))
-KeyError: 'st.session_state has no key "df_simulated_record". Did you forget to initialize it? More info: https://docs.streamlit.io/develop/concepts/architecture/session-state#initialization'
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290    925   7250 --:--:-- --:--:-- --:--:--  8175
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   330  100    37  100   293   2243  17762 --:--:-- --:--:-- --:--:-- 20625
-2024-07-11 13:21:58.902 Uncaught app exception
-Traceback (most recent call last):
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 567, in _run_script
-    self._session_state.on_script_will_rerun(
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\state\safe_session_state.py", line 66, in on_script_will_rerun
-    self._state.on_script_will_rerun(latest_widget_states)
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\state\session_state.py", line 514, in on_script_will_rerun
-    self._call_callbacks()
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\state\session_state.py", line 527, in _call_callbacks
-    self._new_widget_state.call_callback(wid)
-  File "C:\Users\Jean\anaconda3\envs\env_ocr_projet_8\lib\site-packages\streamlit\runtime\state\session_state.py", line 271, in call_callback
-    callback(*args, **kwargs)
-  File "C:\Users\Jean\OCR\git\project_8\utils\my_functions.py", line 96, in display_simulated_score
-    debug(feature + '=' + str(new_value))
-  File "C:\Users\Jean\OCR\git\project_8\utils\my_functions.py", line 15, in debug
-    with open('./log/streamlit_app.log', 'a') as f:
-PermissionError: [Errno 13] Permission denied: './log/streamlit_app.log'
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290   1608  12608 --:--:-- --:--:-- --:--:-- 14217
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   330  100    37  100   293   2685  21264 --:--:-- --:--:-- --:--:-- 25384
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290    578   4531 --:--:-- --:--:-- --:--:--  5190
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   324  100    37  100   287   3858  29930 --:--:-- --:--:-- --:--:-- 36000
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 88   330    0     0  100   293      0  17637 --:--:-- --:--:-- --:--:-- 17235100   330  100    37  100   293   2178  17249 --:--:-- --:--:-- --:--:-- 19411
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   315  100    36  100   279   4096  31747 --:--:-- --:--:-- --:--:-- 39375
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   330  100    37  100   293   2028  16066 --:--:-- --:--:-- --:--:-- 18333
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   315  100    37  100   278   2163  16258 --:--:-- --:--:-- --:--:-- 18529
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   330  100    37  100   293   1963  15549 --:--:-- --:--:-- --:--:-- 18333
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   316  100    37  100   279   3004  22657 --:--:-- --:--:-- --:--:-- 26333
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   330  100    37  100   293   2272  17998 --:--:-- --:--:-- --:--:-- 20625
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   327  100    37  100   290    973   7631 --:--:-- --:--:-- --:--:--  8605
