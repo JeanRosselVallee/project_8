@@ -19,7 +19,7 @@ Current dir is project root's
 '''
 str_logo = '👨‍🏫'
 str_title = str_logo + 'Dashboard'	     # MetaData
-my.debug(str_title + ' - Version 0.0.2') 
+#my.debug(str_title + ' - Version 0.0.2') 
 #st.title(str_title) # STREAM: print Title
 str_author = 'Jean Vallée'
 

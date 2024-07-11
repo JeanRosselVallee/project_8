@@ -6,6 +6,7 @@ import plotly.graph_objects as go
 import subprocess
 import shap
 import matplotlib.pyplot as plt
+import platform
 
 # Debug Text
 def debug(str_debug) :
@@ -62,8 +63,13 @@ def get_curl_command(df_sample, url) :
 def get_li_scores(df_data_sample) :
 	df_X_sample		  = df_data_sample.drop('TARGET', axis='columns')
 	str_curl			 = get_curl_command(df_X_sample, 'localhost:5677/invocations')
+	
+	str_operating_system = str(platform.system())
+	if str_operating_system == 'Windows' :  # In Windows, add \ before quotes
+		str_curl = str_curl.replace('"', '\\"').replace('\'', '"')
+	
 	str_dict_predictions = subprocess.run(str_curl, shell=True, stdout=subprocess.PIPE, text=True).stdout 
-	#debug('str_dict_predictions=[' + ']')
+	#debug('str_dict_predictions=[' + str_dict_predictions + ']')
 	dict_predictions	 = eval(str_dict_predictions) # {"predictions": [0]}
 	li_predictions	   = dict_predictions['predictions']
 	return li_predictions
@@ -74,28 +80,36 @@ def get_1_type_cols_list(df_in, type_in) :
 	return list(ser_cols_types[ser_cols_types==type_in].index)
 
 # Slider's Callback Function : Display Simulated Score
-def display_simulated_score(idx_feature, li_features, frame) :
+def display_simulated_score(df_sample_1, idx_feature, li_features, frame) :
 	new_value = eval('st.session_state.slider_value_' + str(idx_feature))
 	feature = li_features[idx_feature]
-	df_1_record = st.session_state['df_simulated_record'].copy()
+	
+	
+	
+	if 'df_simulated_record' in st.session_state :
+		df_1_record = st.session_state['df_simulated_record'].copy()
+	else :
+		df_1_record = df_sample_1
+	
+	
 	df_1_record[feature] = new_value
-	debug(feature + '=' + str(new_value))
+	# st.write(feature + '=' + str(new_value))
 	frame.dataframe(df_1_record, hide_index=True)  
 	float_1_score = get_li_scores(df_1_record)[0]
 	frame.plotly_chart(plot_gauge(100*float_1_score), use_container_width=True)
 	st.session_state['df_simulated_record'] = df_1_record.copy()
 
 # slider
-def plot_slider(li_old_features, li_new_features, feature_idx, frame_slider, frame_gauge, val_default, val_min, val_max) :
+def plot_slider(df_sample_1, li_old_features, li_new_features, feature_idx, frame_slider, frame_gauge, val_default, val_min, val_max) :
 	value_out = frame_slider.slider(li_new_features[feature_idx], val_min, val_max,   # (min, max, default)
-					val_default, on_change=display_simulated_score, args=[feature_idx, li_old_features, frame_gauge],
+					val_default, on_change=display_simulated_score, args=[df_sample_1, feature_idx, li_old_features, frame_gauge],
 					key='slider_value_' + str(feature_idx))
 	#return value_out
 
 # Get df_X features
 def get_li_features(path) :
 	with open(path) as f:
-	    str_li_features = f.read()
+		str_li_features = f.read()
 	li_features = eval(str_li_features)
 	return li_features
 
