@@ -29,12 +29,13 @@ def load_data(file, nb_rows=-1):
 		df_empty = pd.DataFrame([])
 		return df_empty
 
-def plot_gauge(n_curr) :
+def plot_gauge(n_curr, class_1=True) :
 	li_markers = [20, 40, 60, 80]
 	li_labels  = [str(n) for n in li_markers]
 	n_max	  = 100
-	n_green	= n_curr / n_max
-	n_red	  = 1 - n_green
+	if class_1 == 0 : n_curr = n_max - n_curr
+	n_red	= n_curr / n_max
+	n_green	  = 1 - n_red
 	color_curr = f'rgb( {n_red}, {n_green},0)'
 	gauge = go.Indicator(
 		mode	= "gauge+number",

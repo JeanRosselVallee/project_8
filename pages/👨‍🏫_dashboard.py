@@ -9,6 +9,8 @@ import matplotlib.pyplot as plt
 #import plotly.graph_objects as go
 import json
 import pickle
+from matplotlib.colors import LinearSegmentedColormap
+
 sys.path.insert(0, os.path.abspath('./utils'))
 import my_functions as my                # Custom module	
 
@@ -40,8 +42,10 @@ path_explainer    = dir_out + 'explainer_X.pkl'
 li_features = my.get_li_features(path_features)
 
 # Pandas
-df_data   = my.load_data(path_data, 10)	
+df_data   = my.load_data(path_data)	
 df_X      = my.load_data(path_X)[li_features]
+df_data_0 = df_data[df_data['TARGET']==0]
+df_data_1 = df_data[df_data['TARGET']==1]
 
 # ===========================================================   SideBar   ===========
 menu = st.sidebar
@@ -95,7 +99,7 @@ np_shap_values = my.load_np(path_shap_values)
 ## Global - Violins
 @st.cache_data
 def get_violins_image() :
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(figsize=(10, 4))
     shap.summary_plot(np_shap_values, df_X, feature_names=li_new_features, show=False)
     plt.savefig(path_violins)
     plt.close()
@@ -108,6 +112,48 @@ fig, ax = plt.subplots() #figsize=(3, 2))
 shap.summary_plot(np_shap_values, df_X, feature_names=li_new_features, show=False)
 frame_right.pyplot(fig)
 '''
+
+## 2-Feature Select-Boxes
+li_request_ids = li_old_features
+str_feature_A = frame_left.selectbox('Feature A', li_request_ids, index=0)
+str_feature_B = frame_left.selectbox('Feature B', li_request_ids, index=1)
+
+
+## 2-Feature Distribution per class
+for feature in [str_feature_A, str_feature_B] :
+    x_curr  = df_selected_record[feature].values[0]
+    fig, ax = plt.subplots(figsize=(10, 4))
+    df_data_1[feature].plot.kde(ax=ax, color='red' , label='Class "1"')
+    df_data_0[feature].plot.kde(ax=ax, color='blue', label='Class "0"')
+    ax.axvline(x=x_curr, color='green', linestyle='--', label=f'Currrent observation = {x_curr}')
+    ax.legend(), ax.set_xlabel(feature)
+    frame_right.pyplot(fig)
+
+
+## Scatter Plot
+@st.cache_data   # Makes points visible by spreading them out
+def spread_out(df_in, str_A, str_B, radius) :
+    df_out_A = df_in[str_A] + np.random.normal(0, radius, size=df_in.shape[0])
+    df_out_B = df_in[str_B] + np.random.normal(0, radius, size=df_in.shape[0])
+    return df_out_A, df_out_B
+
+str_x, str_y = str_feature_A, str_feature_B
+df_A , df_B  = spread_out(df_X, str_x, str_y, radius = 0.15)
+
+@st.cache_data   # Creates a custom color map
+def make_cmap(bottom, low, high, top) : 
+    li_colored_levels = [(0, bottom), (0.49, low), (0.51, high), (1, top)]
+    return LinearSegmentedColormap.from_list('CustomMap', li_colored_levels)
+
+np_y_pred_proba = np.load(dir_out + 'y_pred_proba.npy')
+
+fig, ax = plt.subplots(figsize=(10, 4)) 
+scatter_A_B = plt.scatter(  df_A, df_B, c=np_y_pred_proba, s=0.1, alpha=1, 
+                            cmap=make_cmap('lightblue', 'darkblue', 'darkred', 'pink'))
+plt.xlabel(str_x), plt.ylabel(str_y)
+colorbar_scale = plt.colorbar(scatter_A_B, label='Target')
+frame_right.pyplot(fig)
+
 
 ## Local - Waterfall
 @st.cache_data
@@ -134,6 +180,10 @@ if bool_show_targets :
 	
 menu.image('https://img.freepik.com/vecteurs-premium/icone-score-indicateur-credit-indique-niveau-solvabilite_485380-2529.jpg')
 menu.html(f'<hr> <p align="right">{str_author}</p>')
+
+
+def spread_out(df_in, radius_in) :
+    return df_in + np.random.normal(0, radius_in, size=df_in.shape[0])
 
 
 # Markdown
