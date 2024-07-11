@@ -312,3 +312,6 @@ PermissionError: [Errno 13] Permission denied: './log/streamlit_app.log'
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   330  100    37  100   293   2272  17998 --:--:-- --:--:-- --:--:-- 20625
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   330  100    37  100   293   1481  11734 --:--:-- --:--:-- --:--:-- 13750
