@@ -22,6 +22,10 @@ st.sidebar.image("https://www.whenthebanksaysno.co.uk/wp-content/uploads/2023/05
 # Customize page title
 st.title("Credit Application Dashboard")
 
+st.image('https://img.freepik.com/vecteurs-premium/icone-score-indicateur-credit-indique-niveau-solvabilite_485380-2529.jpg')
+
+
+
 st.markdown(
     """
     This multipage app template demonstrates various interactive web apps created using [streamlit](https://streamlit.io) and [leafmap](https://leafmap.org). It is an open-source project and you are very welcome to contribute to the [GitHub repository](https://github.com/giswqs/streamlit-multipage-template).

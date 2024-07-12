@@ -23,7 +23,7 @@ path_violins	  = dir_out + 'shap_violins.png'
 path_shap_values  = dir_out + 'shap_values.npy'
 
 # Variables
-str_title = 'Simulation'
+str_title = 'Feature Tuning'
 version_no = 1.0
 str_author = 'Jean Vallée'
 
@@ -55,120 +55,92 @@ df_selected_1  = df_data.loc[[selected_ref]]
 df_simulated_1 = df_selected_1.copy()
 df_simulated_1.columns = li_variables
 
+# Display Graphs
+bool_show_graphs = menu.checkbox('Show features\' values on distribution graphs')
+
 # Footer
 menu.html(f'<hr> <p align="right">Version {version_no} <br> by <a href="https://jeanrosselvallee.github.io/">{str_author}</a></p>')
 
 
 # ===========================================================   Main Frame   ========
 
-#st.html(f'<h2 align="center" style="color:lightblue;">{str_title}</h2>')
-st.html(my.get_html_title(str_title, 'h2'))
+# Headers
 
+### 3-columns
+frame_top_1, frame_top_2, frame_top_3 = st.columns([27, 8, 8])
+frame_top_1.html(my.get_html_title(str_title, 'h5'))
+frame_top_2.html(my.get_html_title('Class "1"', 'h5'))
+frame_top_3.html(my.get_html_title('Class "0"', 'h5'))
 
-# DataFrames
+# Records
 
 ## Actual
-### 3-columns
-#frame_top_L, frame_top_C, frame_top_R = st.columns(3)
+float_1_score = my.get_li_scores(df_selected_1)[0]
+### 4-columns
+zone_actual_1, zone_actual_2, zone_actual_3, zone_actual_4 = st.columns([3, 24, 8, 8])
+zone_actual_1.html(my.get_html_title('Actual', 'b'))
+zone_actual_2.dataframe(df_selected_1, hide_index=True)
+zone_actual_3.plotly_chart(my.plot_gauge(100*float_1_score, class_1=True), use_container_width=True)
+zone_actual_4.plotly_chart(my.plot_gauge(100*float_1_score, class_1=False), use_container_width=True)
 
-st.html(my.get_html_title('Actual Record', 'b'))
-st.dataframe(df_selected_1, hide_index=True)
+st.html(f'<hr>')
 
 ## Simulated
-#container_df_simulated = st.empty()   # Container = List of Items
-container_df_simulated = st.container()
+### 4-columns
+zone_simul_1, zone_simul_2, zone_simul_3, zone_simul_4 = st.columns([3, 24, 8, 8])
+zone_simul_1.html(my.get_html_title('Simulation', 'b'))
+container_df_simulated = zone_simul_2.container()
 
-with container_df_simulated.container() : 
-	st.html(my.get_html_title('Simulated Record', 'b'))   # Item #1
-	if 'df_simulated_1' in st.session_state :
-		df_simulated_1 = st.session_state['df_simulated_1'].copy()
-	st.dataframe(df_simulated_1, hide_index=True)    # Item #2
-
+## Simulated
 
 # 2-columns
 frame_L, frame_R = st.columns(2)
 
-
-# ===========================================================   Left Frame   ========
-
-
-## 2-Feature Select-Boxes
+## Selection Boxes
 str_feature_A = frame_L.selectbox('Feature A', li_features, index=0)
 str_feature_B = frame_R.selectbox('Feature B', li_features, index=1)
 li_selected_features = [str_feature_A, str_feature_B]
 li_selected_features_idx = [li_features.index(str_feature_A), li_features.index(str_feature_B)]
 
-'''
-# 2-Feature Distribution per class
-## Graphs
-for idx, feature in enumerate(li_selected_features) :
-	x_curr  = df_selected_1[feature].values[0]
-	fig, ax = plt.subplots(figsize=(5, 4))
-	df_data_1[feature].plot.kde(ax=ax, color='red' , label='Class "1"')
-	df_data_0[feature].plot.kde(ax=ax, color='blue', label='Class "0"')
-	ax.axvline(x=x_curr, color='green', linestyle='--', label=f'Currrent observation = {x_curr}')
-	figure_legend = ax.legend()
-	ax.set_xlabel(feature)
-	if idx == 0 :   frame_L.pyplot(fig)
-	else :		  frame_R.pyplot(fig)
-'''
+
+# Sliders
 
 # Sliders' Containers
 container_slider_A = frame_L.container()
 container_slider_B = frame_R.container()
 
-# Gauges' Containers 
-
-## Actual
-frame_LL, frame_LR = frame_L.columns(2)
-## Class "1"
-container_gauge_actual_1 = frame_LL.container()
-container_gauge_actual_1.html(my.get_html_title('Class "1"', 'h5'))
-## Class "0"
-container_gauge_actual_0 = frame_LR.container()
-container_gauge_actual_0.html(my.get_html_title('Class "0"', 'h5'))
-
-## Simulated
-frame_RL, frame_RR = frame_R.columns(2)
-## Class "1"
-container_gauge_simul_1 = frame_RL.container()
-container_gauge_simul_1.html(my.get_html_title('Class "1"', 'h5'))
-## Class "0"
-container_gauge_simul_0 = frame_RR.container()
-container_gauge_simul_0.html(my.get_html_title('Class "0"', 'h5'))
-
-# Gauges
-
-## Actual
-float_1_score = my.get_li_scores(df_selected_1)[0]
-## Class "1"
-container_gauge_actual_1.plotly_chart(my.plot_gauge(100*float_1_score, class_1=True), use_container_width=True)
-## Class "0"
-container_gauge_actual_0.plotly_chart(my.plot_gauge(100*float_1_score, class_1=False), use_container_width=True)
-
-## Simulated
-## Class "1"
-container_gauge_simul_1.plotly_chart(my.plot_gauge(100*float_1_score, class_1=True), use_container_width=True)
-## Class "0"
-container_gauge_simul_0.plotly_chart(my.plot_gauge(100*float_1_score, class_1=False), use_container_width=True)
-
-# Sliders
 li_features_float = my.get_1_type_cols_list(df_simulated_1, 'float64')
 
 for selected_idx, selected_feature in enumerate(li_selected_features) :
 	if selected_feature in li_features_float : min_value, max_value = 0.0, 1.0
 	else : min_value, max_value = 0, 1
 	
-	initial_value = df_simulated_1[selected_feature].values[0]
-	#st.session_state['selected_feature'] = selected_feature
-	#st.session_state['df_simulated_1'] = df_simulated_1
-	
+	initial_value = df_simulated_1[selected_feature].values[0]	
 	
 	if selected_idx == 0 :  frame_slider = container_slider_A
 	else :		  			frame_slider = container_slider_B
 	#my.plot_slider(li_features, li_new_features, selected_idx, box, frame_left, initial_value, min_value, max_value)
 	my.plot_slider(	df_simulated_1, selected_feature, initial_value,
-					frame_slider, container_gauge_simul_1, container_gauge_simul_0, container_df_simulated)
+					frame_slider, zone_simul_3, zone_simul_4, container_df_simulated)
+
+
+# Feature Distribution per class
+## Graphs
+if bool_show_graphs :
+	for idx, feature in enumerate(li_selected_features) :
+		x_actual = np.round(df_selected_1[feature].values[0], 2)
+		if ('slider_value_' + feature) in st.session_state :
+				x_simul  = eval('st.session_state.slider_value_' + feature)
+		else :  x_simul  = x_actual
+		fig, ax  = plt.subplots(figsize=(10, 3))
+		ax.axvline(x=x_simul,  color='orange', linestyle='--', label=f'Simulated value= {x_simul}')
+		ax.axvline(x=x_actual, color='gray',  linestyle='--', label=f'Actual        value= {x_actual}')
+		df_data_0[feature].plot.kde(ax=ax, color='blue', label='Class "0"')
+		df_data_1[feature].plot.kde(ax=ax, color='red' , label='Class "1"')
+		figure_legend = ax.legend()
+		ax.set_xlabel(feature)
+		if idx == 0 :   frame_L.pyplot(fig)
+		else :		    frame_R.pyplot(fig)
 
 
 # Instructions

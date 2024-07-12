@@ -93,11 +93,9 @@ def display_simulated_score(df_sample_1, feature, container_gauge_1, container_g
 	df_1_record[feature] = new_value
 	# st.write(feature + '=' + str(new_value))
 	
-	'''
 	with container_df.container() :
-		st.html(get_html_title('Simulated Record 2', 'b'))
 		st.dataframe(df_1_record, hide_index=True)  
-	'''
+	
 	
 	
 	float_1_score = get_li_scores(df_1_record)[0]
@@ -132,5 +130,3 @@ def load_np(path) : return np.load(path) # One-shot load from file
 
 def get_html_title(str_text, str_tag) :
 	return f'<{str_tag} align="center" style="color:lightblue;">{str_text}</{str_tag}>'
-
-
