@@ -14,6 +14,15 @@ st.sidebar.html('\
     <p align="right">' + str_version + '</p>')
 
 
+
+markdown = """
+1. Select a client's application for credit
+2. Find your favorite emoji from https://emojipedia.org.
+4. Add a new app to the `pages/` directory with an emoji in the file name, e.g., `1_🚀_Chart.py`.
+"""
+st.markdown(markdown)
+
+
 # Load data from URL
 DATE_COLUMN = 'date/time'
 DATA_URL = ('https://s3-us-west-2.amazonaws.com/'

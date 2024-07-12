@@ -17,14 +17,22 @@ st.sidebar.info("""
 	Web App URL: <https://project8-ocr.streamlit.app/>
 	GitHub Repository: <https://github.com/JeanRosselVallee/project_8>
 	""")
-st.sidebar.image("https://www.whenthebanksaysno.co.uk/wp-content/uploads/2023/05/D9585792-ED4C-4363-900E-1EDCE31B99B1.jpeg")
+st.sidebar.image("https://www.whenthebanksaysno.co.uk/wp-content/uploads/2023/05/D9585792-ED4C-4363-900E-1EDCE31B99B1.jpeg", width=50)
 
 # Customize page title
 st.title("Credit Application Dashboard")
 
+
 st.image('https://img.freepik.com/vecteurs-premium/icone-score-indicateur-credit-indique-niveau-solvabilite_485380-2529.jpg')
 
 
+st.markdown(
+	'''
+	- Credit Application Dashboard
+	- Customer Profile
+	- Simulation 
+'''
+)
 
 st.markdown(
     """
@@ -39,18 +47,8 @@ markdown = """
 2. Find your favorite emoji from https://emojipedia.org.
 4. Add a new app to the `pages/` directory with an emoji in the file name, e.g., `1_🚀_Chart.py`.
 """
-
-st.write("# Welcome to Streamlit! 👋")
-
-st.sidebar.success("Select a demo above.")
-
-st.markdown(
-	'''
-	# Credit Application Dashboard
-	- Customer Profile
-	- Simulation 
-'''
-)
-
-
 st.markdown(markdown)
+
+st.sidebar.success("Success message")
+
+
