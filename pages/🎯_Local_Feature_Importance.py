@@ -6,6 +6,7 @@ import sys
 import os
 import shap
 import matplotlib.pyplot as plt
+import pickle
 
 sys.path.insert(0, os.path.abspath('./utils'))
 import my_functions as my                # Custom module	
@@ -21,6 +22,7 @@ path_X            = dir_in  + 'X_test_2.csv'
 path_features     = dir_in  + 'li_features.txt'
 path_waterfall      = dir_out + 'shap_waterfall.png'
 path_shap_values  = dir_out + 'shap_values.npy'
+path_explainer    = dir_out + 'explainer_X.pkl'
 
 # Variables
 li_features = my.get_li_features(path_features)

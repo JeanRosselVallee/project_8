@@ -83,7 +83,7 @@ str_feature_B = frame_right.selectbox('Feature B', li_request_ids, index=1)
 ## Graphs
 for idx, feature in enumerate([str_feature_A, str_feature_B]) :
     x_curr  = df_selected_record[feature].values[0]
-    fig, ax = plt.subplots(figsize=(5, 7))
+    fig, ax = plt.subplots(figsize=(5, 4))
     df_data_1[feature].plot.kde(ax=ax, color='red' , label='Class "1"')
     df_data_0[feature].plot.kde(ax=ax, color='blue', label='Class "0"')
     ax.axvline(x=x_curr, color='green', linestyle='--', label=f'Currrent observation = {x_curr}')

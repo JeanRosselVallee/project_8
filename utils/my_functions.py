@@ -60,6 +60,12 @@ def get_curl_command(df_sample, url) :
 	str_data			 = '\'{"dataframe_split": ' + str_features_values + '}\' '
 	return 'curl -d' + str_data + '''-H 'Content-Type: application/json' -X POST ''' + url
 
+
+def get_1_type_cols_list(df_in, type_in) :
+	''' Lists all columns in a Pandas of a given type '''
+	ser_cols_types = df_in.dtypes
+	return list(ser_cols_types[ser_cols_types==type_in].index)
+	
 def get_li_scores(df_data_sample) :
 	df_X_sample		  = df_data_sample.drop('TARGET', axis='columns')
 	str_curl			 = get_curl_command(df_X_sample, 'localhost:5677/invocations')
@@ -74,18 +80,10 @@ def get_li_scores(df_data_sample) :
 	li_predictions	   = dict_predictions['predictions']
 	return li_predictions
 
-def get_1_type_cols_list(df_in, type_in) :
-	''' Lists all columns in a Pandas of a given type '''
-	ser_cols_types = df_in.dtypes
-	return list(ser_cols_types[ser_cols_types==type_in].index)
-
 # Slider's Callback Function : Display Simulated Score
-def display_simulated_score(df_sample_1, idx_feature, li_features, frame) :
-	new_value = eval('st.session_state.slider_value_' + str(idx_feature))
-	feature = li_features[idx_feature]
-	
-	
-	
+def display_simulated_score(df_sample_1, feature, container_gauge_1, container_gauge_0, container_df) :
+	new_value = eval('st.session_state.slider_value_' + feature)
+
 	if 'df_simulated_record' in st.session_state :
 		df_1_record = st.session_state['df_simulated_record'].copy()
 	else :
@@ -94,20 +92,33 @@ def display_simulated_score(df_sample_1, idx_feature, li_features, frame) :
 	
 	df_1_record[feature] = new_value
 	# st.write(feature + '=' + str(new_value))
-	frame.dataframe(df_1_record, hide_index=True)  
+	
+	'''
+	with container_df.container() :
+		st.html(get_html_title('Simulated Record 2', 'b'))
+		st.dataframe(df_1_record, hide_index=True)  
+	'''
+	
+	
 	float_1_score = get_li_scores(df_1_record)[0]
-	frame.html('<hr><h4 align="center">Class "1"</h4>')
-	frame.plotly_chart(plot_gauge(100*float_1_score, class_1=True), use_container_width=True)
-	frame.html('<hr><h4 align="center">Class "0"</h4>')
-	frame.plotly_chart(plot_gauge(100*float_1_score, class_1=False), use_container_width=True)
+	container_gauge_1.plotly_chart(plot_gauge(100*float_1_score, class_1=True), use_container_width=True)
+	container_gauge_0.plotly_chart(plot_gauge(100*float_1_score, class_1=False), use_container_width=True)
 	st.session_state['df_simulated_record'] = df_1_record.copy()
 
-# slider
-def plot_slider(df_sample_1, li_old_features, li_new_features, feature_idx, frame_slider, frame_gauge, val_default, val_min, val_max) :
-	value_out = frame_slider.slider(li_new_features[feature_idx], val_min, val_max,   # (min, max, default)
-					val_default, on_change=display_simulated_score, args=[df_sample_1, feature_idx, li_old_features, frame_gauge],
-					key='slider_value_' + str(feature_idx))
-	#return value_out
+# Plot sliders
+def plot_slider(	df_sample_1, feature, curr_value,
+					frame_slider, container_gauge_1, container_gauge_0, container_df) :
+
+	li_features_float = get_1_type_cols_list(df_sample_1, 'float64')
+	if feature in li_features_float :   min_value, max_value = 0.0, 1.0
+	else : 								min_value, max_value =   0,   1
+	
+	
+	frame_slider.slider(	feature, min_value, max_value, curr_value,   # (min, max, default)
+							on_change=display_simulated_score, 
+								args=[	df_sample_1, feature, 
+										container_gauge_1, container_gauge_0, container_df],
+							key='slider_value_' + feature)
 
 # Get df_X features
 def get_li_features(path) :
@@ -118,5 +129,8 @@ def get_li_features(path) :
 
 @st.cache_data
 def load_np(path) : return np.load(path) # One-shot load from file
+
+def get_html_title(str_text, str_tag) :
+	return f'<{str_tag} align="center" style="color:lightblue;">{str_text}</{str_tag}>'
 
 

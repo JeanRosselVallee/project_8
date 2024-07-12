@@ -6,6 +6,7 @@ import sys
 import os
 import shap
 import matplotlib.pyplot as plt
+from matplotlib.colors import LinearSegmentedColormap
 
 sys.path.insert(0, os.path.abspath('./utils'))
 import my_functions as my                # Custom module	
