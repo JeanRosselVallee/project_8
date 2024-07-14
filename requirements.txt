@@ -1,7 +1,7 @@
 pandas
 numpy
+pickle
 streamlit
 shap
 plotly
 matplotlib
-pickle
