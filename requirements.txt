@@ -2,4 +2,6 @@ pandas
 numpy
 streamlit
 shap
-plotly
+plotly.graph_objects
+matplotlib
+import pickle
