@@ -26,11 +26,12 @@ path_explainer    = dir_out + 'explainer_X.pkl'
 
 # Variables
 li_features = my.get_li_features(path_features)
-#li_old_features = list(df_selected_record.columns)
 str_title = 'Local Feature Importance'
 version_no = 1.0
-
 str_author = 'Jean Vallée'
+
+for k, v in st.session_state.items():
+    st.session_state[k] = v
 
 # Shortened fields' names
 li_new_features = ['male', 'score_A', 'score_B', 'edu_level_2', 'edu_level_3', 'cash_loan', 'employee']
@@ -49,7 +50,7 @@ menu = st.sidebar
 
 # Application Selection
 ser_request_ids = sorted(df_data.index)
-selected_ref = menu.selectbox('Credit Application N°', ser_request_ids, index=0) #st.session_state.selectbox_request_key)
+selected_ref = menu.selectbox('Credit Application N°', ser_request_ids, key='shared_selectbox')
 # Selected Record
 df_selected_record = df_data.loc[[selected_ref]] 
 df_record_to_display = df_selected_record.copy()
@@ -100,13 +101,13 @@ st.html('<hr><h3 align="center">Interpretation</h3>')
 frame_left_2, frame_right_2 = st.columns([5, 5])   # Divide Main Frame in 2 again
 frame_left_2.write(
 '''
-1. Read the graph from a point at the bottom to another at the top  
-- E[f(X)] on the X-axis represents the global average score of the population 
-- f(X) on the top represents the target or predicted score
+1. In the scrolling list of the sidebar, search for the customer's application
 
-.
+2. Read the graph from a point at the bottom to another at the top  
+	- E[f(X)] on the X-axis represents the global average score of the population 
+	- f(X) on the top represents the target or predicted score
 
-2. Progressively add up the SHAP value of each feature
+3. Progressively add up the SHAP value of each feature
 - an arrow represents the SHAP value or its importance on the prediction
     - a red arrow has a positive impact 
     - a blue arrow has a negative impact
@@ -116,11 +117,11 @@ frame_left_2.write(
 
 frame_right_2.write(
 '''
-3. Notice that the order of the importance of features isn't the same for every prediction
+4. Notice that the order of the importance of features isn't the same for every prediction
 
 .
 
-4. The sign of the result of f(X) designates the predicted class 
+5. The sign of the result of f(X) designates the predicted class 
     - negative means class "0"
     - positive means class "1"
 '''

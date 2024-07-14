@@ -4,51 +4,61 @@ Main page of Streamlit app
 '''
 
 import streamlit as st
+import sys
+import os
 
+sys.path.insert(0, os.path.abspath('./utils'))
+import my_functions as my		# Custom module	
+
+# Initialisation 
 st.set_page_config(
 	page_title="Hello",
 	page_icon="👋",
 	layout="wide"	
 )
+str_title = "Credit Application Dashboard"
 
-# Customize the sidebar
-st.sidebar.title("About")
-st.sidebar.info("""
-	Web App URL: <https://project8-ocr.streamlit.app/>
-	GitHub Repository: <https://github.com/JeanRosselVallee/project_8>
-	""")
-st.sidebar.image("https://www.whenthebanksaysno.co.uk/wp-content/uploads/2023/05/D9585792-ED4C-4363-900E-1EDCE31B99B1.jpeg", width=50)
-
-# Customize page title
-st.title("Credit Application Dashboard")
-
-
-st.image('https://img.freepik.com/vecteurs-premium/icone-score-indicateur-credit-indique-niveau-solvabilite_485380-2529.jpg')
-
-
-st.markdown(
+# Sidebar
+st.sidebar.image("https://www.whenthebanksaysno.co.uk/wp-content/uploads/2023/05/D9585792-ED4C-4363-900E-1EDCE31B99B1.jpeg")
+st.sidebar.markdown(
 	'''
-	- Credit Application Dashboard
-	- Customer Profile
-	- Simulation 
-'''
-)
-
-st.markdown(
-    """
-    This multipage app template demonstrates various interactive web apps created using [streamlit](https://streamlit.io) and [leafmap](https://leafmap.org). It is an open-source project and you are very welcome to contribute to the [GitHub repository](https://github.com/giswqs/streamlit-multipage-template).
-    """
-)
-
-st.header("Instructions")
-
-markdown = """
-1. Select a client's application for credit
-2. Find your favorite emoji from https://emojipedia.org.
-4. Add a new app to the `pages/` directory with an emoji in the file name, e.g., `1_🚀_Chart.py`.
-"""
-st.markdown(markdown)
-
+	# About
+	- [Web App URL](https://project8-ocr.streamlit.app/)
+	- [GitHub Repository](https://github.com/JeanRosselVallee/project_8)
+	''')
 st.sidebar.success("Success message")
 
 
+# ================================= Main Frame ================
+st.html(my.get_html_title(str_title, 'h2'))
+
+frame_L, frame_R = st.columns(2)
+
+# ================================= Left Frame ================
+
+frame_L.markdown(
+'''
+### Contents 
+
+|N°|Page|Graph|
+|--|--|--|
+|1| Global Feature Importance|Violins|
+|2| Local Feature Importance|Waterfall|
+|3| Simulation by Feature Tuning|KDE|
+|4| Distribution of features A & B|KDE|
+|4| Correlation of features A & B|Scatter Plot|
+
+### Instructions
+On the Sidebar, 
+- Click on a page name
+
+### To Do's
+- Number pages
+1. Select a client's application for credit
+- Select the reference of the customer's credit application
+
+'''
+)
+# ================================= Right Frame ================
+
+frame_R.image('https://img.freepik.com/vecteurs-premium/icone-score-indicateur-credit-indique-niveau-solvabilite_485380-2529.jpg')

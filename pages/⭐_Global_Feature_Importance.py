@@ -27,8 +27,10 @@ li_features = my.get_li_features(path_features)
 #li_old_features = list(df_selected_record.columns)
 str_title = 'Global Feature Importance'
 version_no = 1.0
-
 str_author = 'Jean Vallée'
+
+for k, v in st.session_state.items():
+    st.session_state[k] = v
 
 # Shortened fields' names
 li_new_features = ['male', 'score_A', 'score_B', 'edu_level_2', 'edu_level_3', 'cash_loan', 'employee']
@@ -47,7 +49,7 @@ menu = st.sidebar
 
 # Application Selection
 ser_request_ids = sorted(df_data.index)
-selected_ref = menu.selectbox('Credit Application N°', ser_request_ids, index=0) #st.session_state.selectbox_request_key)
+selected_ref = menu.selectbox('Credit Application N°', ser_request_ids, key='shared_selectbox')
 # Selected Record
 df_selected_record = df_data.loc[[selected_ref]] 
 df_record_to_display = df_selected_record.copy()

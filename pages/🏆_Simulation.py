@@ -8,7 +8,7 @@ import shap
 import matplotlib.pyplot as plt
 
 sys.path.insert(0, os.path.abspath('./utils'))
-import my_functions as my				# Custom module	
+import my_functions as my		# Custom module	
 
 # ===========================================================   Data   ============== 
 # Dirs
@@ -26,6 +26,9 @@ path_shap_values  = dir_out + 'shap_values.npy'
 str_title = 'Feature Tuning'
 version_no = 1.0
 str_author = 'Jean Vallée'
+
+for k, v in st.session_state.items():
+    st.session_state[k] = v
 
 
 # Features
@@ -48,7 +51,9 @@ menu = st.sidebar
 
 # Select Request Id
 ser_request_ids = sorted(df_data.index)
-selected_ref	= menu.selectbox('Credit Application N°', ser_request_ids, index=0) #st.session_state.selectbox_request_key)
+
+ser_request_ids = sorted(df_data.index)
+selected_ref = menu.selectbox('Credit Application N°', ser_request_ids, key='shared_selectbox')
 
 # Select Record
 df_selected_1  = df_data.loc[[selected_ref]] 
@@ -81,7 +86,7 @@ zone_actual_1, zone_actual_2, zone_actual_3, zone_actual_4 = st.columns([3, 24, 
 zone_actual_1.html(my.get_html_title('Actual', 'b'))
 zone_actual_2.dataframe(df_selected_1, hide_index=True)
 zone_actual_3.plotly_chart(my.plot_gauge(100*float_1_score, class_1=True), use_container_width=True)
-zone_actual_4.plotly_chart(my.plot_gauge(100*float_1_score, class_1=False), use_container_width=True)
+zone_actual_4.plotly_chart(my.plot_gauge(100*float_1_score, class_1=False))
 
 st.html(f'<hr>')
 
@@ -119,7 +124,6 @@ for selected_idx, selected_feature in enumerate(li_selected_features) :
 	
 	if selected_idx == 0 :  frame_slider = container_slider_A
 	else :		  			frame_slider = container_slider_B
-	#my.plot_slider(li_features, li_new_features, selected_idx, box, frame_left, initial_value, min_value, max_value)
 	my.plot_slider(	df_simulated_1, selected_feature, initial_value,
 					frame_slider, zone_simul_3, zone_simul_4, container_df_simulated)
 
@@ -128,9 +132,9 @@ for selected_idx, selected_feature in enumerate(li_selected_features) :
 ## Graphs
 if bool_show_graphs :
 	for idx, feature in enumerate(li_selected_features) :
-		x_actual = np.round(df_selected_1[feature].values[0], 2)
+		x_actual = round(df_selected_1[feature].values[0], 2)
 		if ('slider_value_' + feature) in st.session_state :
-				x_simul  = eval('st.session_state.slider_value_' + feature)
+				x_simul  = round(eval('st.session_state.slider_value_' + feature), 2)
 		else :  x_simul  = x_actual
 		fig, ax  = plt.subplots(figsize=(10, 3))
 		ax.axvline(x=x_simul,  color='orange', linestyle='--', label=f'Simulated value= {x_simul}')
@@ -143,36 +147,34 @@ if bool_show_graphs :
 		else :		    frame_R.pyplot(fig)
 
 
+st.html('<hr>')
+
 # Instructions
-st.html('<hr><h3 align="center">Instructions</h3>')
-frame_L_2, frame_R_2 = st.columns(2)   # Divide Main Frame in 2 again
-frame_L_2.write(
+frame_left_2, frame_right_2 = st.columns([5, 5])   # Divide Main Frame in 2 again
+frame_left_2.write(
 '''
-1. Scores from external sources are the most influential of attributes
+### Scenario
+The banker shows a customer how to increase the chances for an approval of his credit application
 
-2. Characterisation of a bad borrower:
-	- low scores from external sources
-	- no higher education
-	- male
-	- apply for a cash loan
-	- employee
-	- secondary education
+### Goal
+The banker finds a combination of features' values that
+- decreases the score of Class "0" (bad  borrowers), or,	
+- increases the score of Class "1" (good borrowers)
 '''
 )
 
-frame_R_2.write(
+frame_right_2.write(
 '''
-3. Suggestions to improve chances of a credit approval:
-	- don't apply for a cash loan
-	- get a higher education degree
+### Instructions
+1. In the scrolling list of the sidebar, search for the customer's application
+2. Select features to tune in 2 by 2
+3. Use the slider to update the features' values
+4. Suggestions to improve chances of a credit approval:
+    - don't apply for a cash loan
+    - get a higher education degree
 
-4. Most frequent values :		
-	- high scores from external sources
-	- no higher education
-	- female
-	- applications for cash loans
-	- employee
-	- secondary education
+.
+	
+##### Cf. [Interpretation Guide](https://www.aidancooper.co.uk/content/images/size/w1600/2021/11/beeswarm-1.png)👈
 '''
 )
-st.markdown('##### Cf. [Interpretation Guide](https://www.aidancooper.co.uk/content/images/size/w1600/2021/11/beeswarm-1.png)👈')

@@ -27,8 +27,10 @@ path_shap_values  = dir_out + 'shap_values.npy'
 li_features = my.get_li_features(path_features)
 str_title = 'Correlation of Features'
 version_no = 1.0
-
 str_author = 'Jean Vallée'
+
+for k, v in st.session_state.items():
+    st.session_state[k] = v
 
 # Shortened fields' names
 li_new_features = ['male', 'score_A', 'score_B', 'edu_level_2', 'edu_level_3', 'cash_loan', 'employee']
@@ -47,7 +49,10 @@ menu = st.sidebar
 
 # Application Selection
 ser_request_ids = sorted(df_data.index)
-selected_ref = menu.selectbox('Credit Application N°', ser_request_ids, index=0) #st.session_state.selectbox_request_key)
+
+ser_request_ids = sorted(df_data.index)
+selected_ref = menu.selectbox('Credit Application N°', ser_request_ids, key='shared_selectbox')
+
 # Selected Record
 df_selected_record = df_data.loc[[selected_ref]] 
 df_record_to_display = df_selected_record.copy()
@@ -76,8 +81,8 @@ frame_left, frame_right = st.columns([5, 5])
 ## 2-Feature Select-Boxes
 li_old_features = list(df_X.head(1).columns)
 li_request_ids = li_old_features
-str_feature_A = frame_left.selectbox('Feature A', li_request_ids, index=0)
-str_feature_B = frame_right.selectbox('Feature B', li_request_ids, index=1)
+str_feature_A = frame_left.selectbox( 'Feature on X-axis', li_request_ids, index=0)
+str_feature_B = frame_right.selectbox('Feature on Y-axis', li_request_ids, index=1)
 
 
 # 2-Feature Distribution per class
@@ -106,37 +111,18 @@ colorbar_scale = plt.colorbar(scatter_A_B, label='Target')
 st.pyplot(fig)
 
 
+st.html('<hr>')
 
 # Instructions
-st.html('<hr><h3 align="center">Instructions</h3>')
-frame_left_2, frame_right_2 = st.columns([5, 5])   # Divide Main Frame in 2 again
-frame_left_2.write(
+st.write(
 '''
-1. Scores from external sources are the most influential of attributes
-
-2. Characterisation of a bad borrower:
-    - low scores from external sources
-    - no higher education
-    - male
-    - apply for a cash loan
-    - employee
-    - secondary education
-'''
-)
-
-frame_right_2.write(
-'''
-3. Suggestions to improve chances of a credit approval:
-    - don't apply for a cash loan
-    - get a higher education degree
-
-4. Most frequent values :        
-    - high scores from external sources
-    - no higher education
-    - female
-    - applications for cash loans
-    - employee
-    - secondary education
+### Instructions
+1. Select 2 Features to visualize their distribution
+2. For each graph,
+    - bluish dots belong to Class "0"
+    - redish dots belong to Class "1"
+3. Notice that some noise has been added to differentiate classes' groups 
+	- the values of binary features aren't exactly 0 and 1 but around them 
 '''
 )
 st.markdown('##### Cf. [Interpretation Guide](https://www.aidancooper.co.uk/content/images/size/w1600/2021/11/beeswarm-1.png)👈')

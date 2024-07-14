@@ -34,22 +34,22 @@ def plot_gauge(n_curr, class_1=True) :
 	li_markers = [20, 40, 60, 80]
 	li_labels  = [str(n) for n in li_markers]
 	n_max	  = 100
-	if class_1 == 0 : n_curr = n_max - n_curr
 	n_red	= n_curr / n_max
 	n_green	  = 1 - n_red
 	color_curr = f'rgb( {n_red}, {n_green},0)'
+	if not class_1 : n_curr = n_max - n_curr
 	gauge = go.Indicator(
 		mode	= "gauge+number",
 		value   = n_curr,
 		number  = {'suffix': "%"},
 		domain  = {'x': [0, 1], 'y': [0, .8]},
-		gauge={'axis'	 : {'range': [None, n_max], 'tickvals': li_markers, 'ticktext': li_labels},
+		gauge={'axis'	  : {'range': [None, n_max], 'tickvals': li_markers, 'ticktext': li_labels},
 			   'bar'	  : {'color': color_curr, 'thickness': 1},
 			   'threshold': {'line': {'color': 'black', 'width': 2}, 'thickness': 1, 'value': n_curr}
 			   },
 	)
 	layout	 = go.Layout(
-		height = 100,
+		height = 75,
 		margin = go.layout.Margin(l=2, r=2, b=2, t=2, pad=1)
 	)
 	return go.Figure(gauge, layout=layout)
@@ -75,7 +75,7 @@ def get_li_scores(df_data_sample) :
 		str_curl = str_curl.replace('"', '\\"').replace('\'', '"')
 	
 	str_dict_predictions = subprocess.run(str_curl, shell=True, stdout=subprocess.PIPE, text=True).stdout 
-	#debug('str_dict_predictions=[' + str_dict_predictions + ']')
+	#st.warning('str_dict_predictions=[' + str_dict_predictions + ']')
 	dict_predictions	 = eval(str_dict_predictions) # {"predictions": [0]}
 	li_predictions	   = dict_predictions['predictions']
 	return li_predictions
@@ -112,7 +112,7 @@ def plot_slider(	df_sample_1, feature, curr_value,
 	else : 								min_value, max_value =   0,   1
 	
 	
-	frame_slider.slider(	feature, min_value, max_value, curr_value,   # (min, max, default)
+	frame_slider.slider(	'Tune feature\'s value :', min_value, max_value, curr_value,   # (min, max, default)
 							on_change=display_simulated_score, 
 								args=[	df_sample_1, feature, 
 										container_gauge_1, container_gauge_0, container_df],
