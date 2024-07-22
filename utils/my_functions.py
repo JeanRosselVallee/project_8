@@ -8,6 +8,9 @@ import shap
 import matplotlib.pyplot as plt
 import platform
 
+# Variables
+host = 'http://34.155.188.3/'
+
 # Debug Text
 def debug(str_debug) :
 	str_message = f':red[DEBUG: {str_debug}]'
@@ -68,7 +71,7 @@ def get_1_type_cols_list(df_in, type_in) :
 	
 def get_li_scores(df_data_sample) :
 	df_X_sample		  = df_data_sample.drop('TARGET', axis='columns')
-	str_curl			 = get_curl_command(df_X_sample, 'localhost:5677/invocations')
+	str_curl			 = get_curl_command(df_X_sample, host + ':5677/invocations')
 	
 	str_operating_system = str(platform.system())
 	if str_operating_system == 'Windows' :  # In Windows, add \ before quotes
