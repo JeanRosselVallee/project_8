@@ -6,15 +6,15 @@ flavors:
     loader_module: mlflow.sklearn
     model_path: model.pkl
     predict_fn: predict
-    python_version: 3.10.12
+    python_version: 3.11.2
   sklearn:
     code: null
     pickled_model: model.pkl
     serialization_format: cloudpickle
     sklearn_version: 1.5.0
 mlflow_version: 2.14.1
-model_size_bytes: 74447
-model_uuid: 0fd94b4d0654428fb74e78a2bcf8a8c9
+model_size_bytes: 74922
+model_uuid: 7276f157879b4f3d8e7b653a5bac17f3
 signature:
   inputs: '[{"type": "long", "name": "CODE_GENDER_M", "required": true}, {"type":
     "double", "name": "EXT_SOURCE_3", "required": true}, {"type": "double", "name":
@@ -24,4 +24,4 @@ signature:
     true}, {"type": "long", "name": "NAME_INCOME_TYPE_Working", "required": true}]'
   outputs: '[{"type": "long", "name": "TARGET", "required": true}]'
   params: null
-utc_time_created: '2024-07-09 11:58:34.008791'
+utc_time_created: '2024-07-23 20:53:29.435507'
