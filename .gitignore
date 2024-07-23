@@ -1,6 +1,7 @@
 .ipynb_checkpoints
 */__pycache__
-
+nohup.out
+my_env/
 log/streamlit_app.log
 utils/__pycache__/my_functions.cpython-310.pyc
 log/streamlit_app.log

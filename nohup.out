@@ -1,0 +1,453 @@
+[I 2024-07-23 15:53:33.903 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2024-07-23 15:53:33.907 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2024-07-23 15:53:33.912 ServerApp] jupyterlab | extension was successfully linked.
+[I 2024-07-23 15:53:33.917 ServerApp] notebook | extension was successfully linked.
+[I 2024-07-23 15:53:33.919 ServerApp] Writing Jupyter server cookie secret to /home/jv_isa4031/.local/share/jupyter/runtime/jupyter_cookie_secret
+[I 2024-07-23 15:53:34.315 ServerApp] notebook_shim | extension was successfully linked.
+[I 2024-07-23 15:53:34.412 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2024-07-23 15:53:34.414 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2024-07-23 15:53:34.415 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2024-07-23 15:53:34.417 LabApp] JupyterLab extension loaded from /home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/jupyterlab
+[I 2024-07-23 15:53:34.417 LabApp] JupyterLab application directory is /home/jv_isa4031/project_8/my_env/share/jupyter/lab
+[I 2024-07-23 15:53:34.418 LabApp] Extension Manager is 'pypi'.
+[I 2024-07-23 15:53:34.461 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2024-07-23 15:53:34.465 ServerApp] notebook | extension was successfully loaded.
+[I 2024-07-23 15:53:34.466 ServerApp] Serving notebooks from local directory: /home/jv_isa4031/project_8
+[I 2024-07-23 15:53:34.466 ServerApp] Jupyter Server 2.14.2 is running at:
+[I 2024-07-23 15:53:34.466 ServerApp] http://vm-p8:5555/tree?token=e7971a7f68d069370926a41dfea121398a1668d5e9226b64
+[I 2024-07-23 15:53:34.466 ServerApp]     http://127.0.0.1:5555/tree?token=e7971a7f68d069370926a41dfea121398a1668d5e9226b64
+[I 2024-07-23 15:53:34.466 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 2024-07-23 15:53:34.469 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/jv_isa4031/.local/share/jupyter/runtime/jpserver-3529-open.html
+    Or copy and paste one of these URLs:
+        http://vm-p8:5555/tree?token=e7971a7f68d069370926a41dfea121398a1668d5e9226b64
+        http://127.0.0.1:5555/tree?token=e7971a7f68d069370926a41dfea121398a1668d5e9226b64
+[I 2024-07-23 15:53:34.482 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[C 2024-07-23 15:53:55.863 ServerApp] received signal 15, stopping
+[I 2024-07-23 15:53:55.864 ServerApp] Shutting down 5 extensions
+[I 2024-07-23 15:54:08.664 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2024-07-23 15:54:08.668 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2024-07-23 15:54:08.673 ServerApp] jupyterlab | extension was successfully linked.
+[I 2024-07-23 15:54:08.677 ServerApp] notebook | extension was successfully linked.
+[I 2024-07-23 15:54:08.908 ServerApp] notebook_shim | extension was successfully linked.
+[I 2024-07-23 15:54:08.969 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2024-07-23 15:54:08.971 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2024-07-23 15:54:08.972 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2024-07-23 15:54:08.973 LabApp] JupyterLab extension loaded from /home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/jupyterlab
+[I 2024-07-23 15:54:08.973 LabApp] JupyterLab application directory is /home/jv_isa4031/project_8/my_env/share/jupyter/lab
+[I 2024-07-23 15:54:08.974 LabApp] Extension Manager is 'pypi'.
+[I 2024-07-23 15:54:09.018 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2024-07-23 15:54:09.022 ServerApp] notebook | extension was successfully loaded.
+[I 2024-07-23 15:54:09.023 ServerApp] Serving notebooks from local directory: /home/jv_isa4031/project_8
+[I 2024-07-23 15:54:09.023 ServerApp] Jupyter Server 2.14.2 is running at:
+[I 2024-07-23 15:54:09.023 ServerApp] http://vm-p8:5677/tree?token=9e800d21b085cf53f7c5dbd57ed7b2f0951ffe8eb3824ab8
+[I 2024-07-23 15:54:09.023 ServerApp]     http://127.0.0.1:5677/tree?token=9e800d21b085cf53f7c5dbd57ed7b2f0951ffe8eb3824ab8
+[I 2024-07-23 15:54:09.023 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 2024-07-23 15:54:09.026 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/jv_isa4031/.local/share/jupyter/runtime/jpserver-3534-open.html
+    Or copy and paste one of these URLs:
+        http://vm-p8:5677/tree?token=9e800d21b085cf53f7c5dbd57ed7b2f0951ffe8eb3824ab8
+        http://127.0.0.1:5677/tree?token=9e800d21b085cf53f7c5dbd57ed7b2f0951ffe8eb3824ab8
+[I 2024-07-23 15:54:09.038 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[I 2024-07-23 16:01:05.849 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2024-07-23 16:01:05.853 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2024-07-23 16:01:05.858 ServerApp] jupyterlab | extension was successfully linked.
+[I 2024-07-23 16:01:05.863 ServerApp] notebook | extension was successfully linked.
+[I 2024-07-23 16:01:06.092 ServerApp] notebook_shim | extension was successfully linked.
+[I 2024-07-23 16:01:06.155 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2024-07-23 16:01:06.158 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2024-07-23 16:01:06.159 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2024-07-23 16:01:06.161 LabApp] JupyterLab extension loaded from /home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/jupyterlab
+[I 2024-07-23 16:01:06.161 LabApp] JupyterLab application directory is /home/jv_isa4031/project_8/my_env/share/jupyter/lab
+[I 2024-07-23 16:01:06.161 LabApp] Extension Manager is 'pypi'.
+[I 2024-07-23 16:01:06.206 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2024-07-23 16:01:06.210 ServerApp] notebook | extension was successfully loaded.
+[I 2024-07-23 16:01:06.211 ServerApp] The port 5677 is already in use, trying another port.
+[I 2024-07-23 16:01:06.211 ServerApp] Serving notebooks from local directory: /home/jv_isa4031/project_8
+[I 2024-07-23 16:01:06.211 ServerApp] Jupyter Server 2.14.2 is running at:
+[I 2024-07-23 16:01:06.211 ServerApp] http://vm-p8:5678/tree?token=f8890adf545c598fc936982f5b62182819015c1a41b9b413
+[I 2024-07-23 16:01:06.211 ServerApp]     http://127.0.0.1:5678/tree?token=f8890adf545c598fc936982f5b62182819015c1a41b9b413
+[I 2024-07-23 16:01:06.211 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 2024-07-23 16:01:06.215 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/jv_isa4031/.local/share/jupyter/runtime/jpserver-3564-open.html
+    Or copy and paste one of these URLs:
+        http://vm-p8:5678/tree?token=f8890adf545c598fc936982f5b62182819015c1a41b9b413
+        http://127.0.0.1:5678/tree?token=f8890adf545c598fc936982f5b62182819015c1a41b9b413
+[I 2024-07-23 16:01:06.227 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[C 2024-07-23 16:03:49.851 ServerApp] received signal 15, stopping
+[C 2024-07-23 16:03:49.851 ServerApp] received signal 15, stopping
+[I 2024-07-23 16:03:49.852 ServerApp] Shutting down 5 extensions
+[I 2024-07-23 16:03:49.852 ServerApp] Shutting down 5 extensions
+[I 2024-07-23 16:04:55.898 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2024-07-23 16:04:55.902 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2024-07-23 16:04:55.907 ServerApp] jupyterlab | extension was successfully linked.
+[I 2024-07-23 16:04:55.912 ServerApp] notebook | extension was successfully linked.
+[I 2024-07-23 16:04:56.174 ServerApp] notebook_shim | extension was successfully linked.
+[I 2024-07-23 16:04:56.239 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2024-07-23 16:04:56.241 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2024-07-23 16:04:56.242 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2024-07-23 16:04:56.244 LabApp] JupyterLab extension loaded from /home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/jupyterlab
+[I 2024-07-23 16:04:56.244 LabApp] JupyterLab application directory is /home/jv_isa4031/project_8/my_env/share/jupyter/lab
+[I 2024-07-23 16:04:56.245 LabApp] Extension Manager is 'pypi'.
+[I 2024-07-23 16:04:56.288 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2024-07-23 16:04:56.292 ServerApp] notebook | extension was successfully loaded.
+[I 2024-07-23 16:04:56.292 ServerApp] Serving notebooks from local directory: /home/jv_isa4031/project_8
+[I 2024-07-23 16:04:56.292 ServerApp] Jupyter Server 2.14.2 is running at:
+[I 2024-07-23 16:04:56.292 ServerApp] http://vm-p8:5677/tree?token=7f5683869c62e9cd262b8f38b6e7c5912afd3414c1fba5a2
+[I 2024-07-23 16:04:56.293 ServerApp]     http://127.0.0.1:5677/tree?token=7f5683869c62e9cd262b8f38b6e7c5912afd3414c1fba5a2
+[I 2024-07-23 16:04:56.293 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 2024-07-23 16:04:56.296 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/jv_isa4031/.local/share/jupyter/runtime/jpserver-3602-open.html
+    Or copy and paste one of these URLs:
+        http://vm-p8:5677/tree?token=7f5683869c62e9cd262b8f38b6e7c5912afd3414c1fba5a2
+        http://127.0.0.1:5677/tree?token=7f5683869c62e9cd262b8f38b6e7c5912afd3414c1fba5a2
+[I 2024-07-23 16:04:56.308 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[C 2024-07-23 16:05:04.090 ServerApp] received signal 15, stopping
+[I 2024-07-23 16:05:04.091 ServerApp] Shutting down 5 extensions
+[I 2024-07-23 16:05:15.096 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2024-07-23 16:05:15.100 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2024-07-23 16:05:15.105 ServerApp] jupyterlab | extension was successfully linked.
+[I 2024-07-23 16:05:15.110 ServerApp] notebook | extension was successfully linked.
+[I 2024-07-23 16:05:15.335 ServerApp] notebook_shim | extension was successfully linked.
+[I 2024-07-23 16:05:15.397 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2024-07-23 16:05:15.399 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2024-07-23 16:05:15.400 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2024-07-23 16:05:15.401 LabApp] JupyterLab extension loaded from /home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/jupyterlab
+[I 2024-07-23 16:05:15.401 LabApp] JupyterLab application directory is /home/jv_isa4031/project_8/my_env/share/jupyter/lab
+[I 2024-07-23 16:05:15.402 LabApp] Extension Manager is 'pypi'.
+[I 2024-07-23 16:05:15.444 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2024-07-23 16:05:15.448 ServerApp] notebook | extension was successfully loaded.
+[I 2024-07-23 16:05:15.448 ServerApp] Serving notebooks from local directory: /home/jv_isa4031/project_8
+[I 2024-07-23 16:05:15.449 ServerApp] Jupyter Server 2.14.2 is running at:
+[I 2024-07-23 16:05:15.449 ServerApp] http://vm-p8:5555/tree?token=afeb600302b4a80698bdf1edcffc44773bbda6e764160f9f
+[I 2024-07-23 16:05:15.449 ServerApp]     http://127.0.0.1:5555/tree?token=afeb600302b4a80698bdf1edcffc44773bbda6e764160f9f
+[I 2024-07-23 16:05:15.449 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 2024-07-23 16:05:15.451 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/jv_isa4031/.local/share/jupyter/runtime/jpserver-3611-open.html
+    Or copy and paste one of these URLs:
+        http://vm-p8:5555/tree?token=afeb600302b4a80698bdf1edcffc44773bbda6e764160f9f
+        http://127.0.0.1:5555/tree?token=afeb600302b4a80698bdf1edcffc44773bbda6e764160f9f
+[I 2024-07-23 16:05:15.463 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[C 2024-07-23 19:41:15.047 ServerApp] received signal 15, stopping
+[I 2024-07-23 19:41:15.055 ServerApp] Shutting down 5 extensions
+[I 2024-07-23 19:41:42.008 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2024-07-23 19:41:42.012 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2024-07-23 19:41:42.017 ServerApp] jupyterlab | extension was successfully linked.
+[I 2024-07-23 19:41:42.022 ServerApp] notebook | extension was successfully linked.
+[I 2024-07-23 19:41:42.312 ServerApp] notebook_shim | extension was successfully linked.
+[I 2024-07-23 19:41:42.382 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2024-07-23 19:41:42.384 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2024-07-23 19:41:42.385 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2024-07-23 19:41:42.388 LabApp] JupyterLab extension loaded from /home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/jupyterlab
+[I 2024-07-23 19:41:42.388 LabApp] JupyterLab application directory is /home/jv_isa4031/project_8/my_env/share/jupyter/lab
+[I 2024-07-23 19:41:42.388 LabApp] Extension Manager is 'pypi'.
+[I 2024-07-23 19:41:42.432 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2024-07-23 19:41:42.436 ServerApp] notebook | extension was successfully loaded.
+[I 2024-07-23 19:41:42.437 ServerApp] Serving notebooks from local directory: /home/jv_isa4031/project_8
+[I 2024-07-23 19:41:42.437 ServerApp] Jupyter Server 2.14.2 is running at:
+[I 2024-07-23 19:41:42.437 ServerApp] http://vm-p8:5555/tree?token=ca2f1c09c274cac278c3b73b8eb90423c6b453d4c5dd5875
+[I 2024-07-23 19:41:42.437 ServerApp]     http://127.0.0.1:5555/tree?token=ca2f1c09c274cac278c3b73b8eb90423c6b453d4c5dd5875
+[I 2024-07-23 19:41:42.437 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 2024-07-23 19:41:42.440 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/jv_isa4031/.local/share/jupyter/runtime/jpserver-5293-open.html
+    Or copy and paste one of these URLs:
+        http://vm-p8:5555/tree?token=ca2f1c09c274cac278c3b73b8eb90423c6b453d4c5dd5875
+        http://127.0.0.1:5555/tree?token=ca2f1c09c274cac278c3b73b8eb90423c6b453d4c5dd5875
+[I 2024-07-23 19:41:42.453 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[C 2024-07-23 19:49:31.920 ServerApp] received signal 15, stopping
+[I 2024-07-23 19:49:31.921 ServerApp] Shutting down 5 extensions
+[I 2024-07-23 19:56:05.727 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2024-07-23 19:56:05.732 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2024-07-23 19:56:05.738 ServerApp] jupyterlab | extension was successfully linked.
+[I 2024-07-23 19:56:05.742 ServerApp] notebook | extension was successfully linked.
+[I 2024-07-23 19:56:06.405 ServerApp] notebook_shim | extension was successfully linked.
+[I 2024-07-23 19:56:06.528 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2024-07-23 19:56:06.530 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2024-07-23 19:56:06.531 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2024-07-23 19:56:06.541 LabApp] JupyterLab extension loaded from /home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/jupyterlab
+[I 2024-07-23 19:56:06.541 LabApp] JupyterLab application directory is /home/jv_isa4031/project_8/my_env/share/jupyter/lab
+[I 2024-07-23 19:56:06.542 LabApp] Extension Manager is 'pypi'.
+[I 2024-07-23 19:56:06.585 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2024-07-23 19:56:06.589 ServerApp] notebook | extension was successfully loaded.
+[I 2024-07-23 19:56:06.590 ServerApp] Serving notebooks from local directory: /home/jv_isa4031/project_8
+[I 2024-07-23 19:56:06.590 ServerApp] Jupyter Server 2.14.2 is running at:
+[I 2024-07-23 19:56:06.590 ServerApp] http://vm-p8:5555/tree?token=32bddede2ec0cd2168a4ee18c996cb425867ffacffde8e19
+[I 2024-07-23 19:56:06.590 ServerApp]     http://127.0.0.1:5555/tree?token=32bddede2ec0cd2168a4ee18c996cb425867ffacffde8e19
+[I 2024-07-23 19:56:06.590 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 2024-07-23 19:56:06.594 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/jv_isa4031/.local/share/jupyter/runtime/jpserver-1559-open.html
+    Or copy and paste one of these URLs:
+        http://vm-p8:5555/tree?token=32bddede2ec0cd2168a4ee18c996cb425867ffacffde8e19
+        http://127.0.0.1:5555/tree?token=32bddede2ec0cd2168a4ee18c996cb425867ffacffde8e19
+[I 2024-07-23 19:56:06.609 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[W 2024-07-23 19:56:28.217 ServerApp] Clearing invalid/expired login cookie username-34-155-188-3-5555
+[W 2024-07-23 19:56:28.218 ServerApp] wrote error: 'Forbidden'
+    Traceback (most recent call last):
+      File "/home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/tornado/web.py", line 1788, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/tornado/web.py", line 3289, in wrapper
+        url = self.get_login_url()
+              ^^^^^^^^^^^^^^^^^^^^
+      File "/home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/jupyter_server/base/handlers.py", line 783, in get_login_url
+        raise web.HTTPError(403)
+    tornado.web.HTTPError: HTTP 403: Forbidden
+[W 2024-07-23 19:56:28.225 ServerApp] 403 GET /api/kernels/2154ef70-d1f5-477e-a73c-faf764635ee6?1721764587393 (@37.170.172.156) 8.29ms referer=http://34.155.188.3:5555/notebooks/server_mlflow.ipynb
+[I 2024-07-23 19:58:41.949 JupyterNotebookApp] 302 GET /tree?token=[secret] (@37.170.172.156) 1.18ms
+[I 2024-07-23 19:59:22.028 JupyterNotebookApp] 302 GET /tree?token=[secret] (@37.170.172.156) 1.03ms
+[I 2024-07-23 19:59:36.488 JupyterNotebookApp] 302 GET /tree (@37.170.172.156) 0.87ms
+[I 2024-07-23 19:59:44.568 ServerApp] User 2cd8155ac0f24e8eb64e76ffc0fc4279 logged in.
+[I 2024-07-23 19:59:44.568 ServerApp] 302 POST /login?next=%2Ftree (2cd8155ac0f24e8eb64e76ffc0fc4279@37.170.172.156) 1.55ms
+[I 2024-07-23 20:04:55.310 ServerApp] Writing notebook-signing key to /home/jv_isa4031/.local/share/jupyter/notebook_secret
+[W 2024-07-23 20:04:55.325 ServerApp] Notebook server_mlflow.ipynb is not trusted
+[I 2024-07-23 20:04:56.178 ServerApp] Kernel started: 23e10abe-6071-49cf-a168-e4d60c0f4e5d
+[I 2024-07-23 20:04:56.952 ServerApp] Connecting to kernel 23e10abe-6071-49cf-a168-e4d60c0f4e5d.
+[I 2024-07-23 20:04:57.047 ServerApp] Connecting to kernel 23e10abe-6071-49cf-a168-e4d60c0f4e5d.
+[I 2024-07-23 20:04:57.115 ServerApp] Connecting to kernel 23e10abe-6071-49cf-a168-e4d60c0f4e5d.
+[I 2024-07-23 20:06:56.287 ServerApp] Saving file at /server_mlflow.ipynb
+[W 2024-07-23 20:06:56.289 ServerApp] Notebook server_mlflow.ipynb is not trusted
+[I 2024-07-23 20:11:23.399 ServerApp] Shutting down on /api/shutdown request.
+[I 2024-07-23 20:11:23.399 ServerApp] Shutting down 5 extensions
+[I 2024-07-23 20:11:23.400 ServerApp] Shutting down 1 kernel
+[I 2024-07-23 20:11:23.400 ServerApp] Kernel shutdown: 23e10abe-6071-49cf-a168-e4d60c0f4e5d
+[I 2024-07-23 20:12:46.829 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2024-07-23 20:12:46.834 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2024-07-23 20:12:46.839 ServerApp] jupyterlab | extension was successfully linked.
+[I 2024-07-23 20:12:46.844 ServerApp] notebook | extension was successfully linked.
+[I 2024-07-23 20:12:47.201 ServerApp] notebook_shim | extension was successfully linked.
+[I 2024-07-23 20:12:47.293 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2024-07-23 20:12:47.297 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2024-07-23 20:12:47.299 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2024-07-23 20:12:47.301 LabApp] JupyterLab extension loaded from /home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/jupyterlab
+[I 2024-07-23 20:12:47.301 LabApp] JupyterLab application directory is /home/jv_isa4031/project_8/my_env/share/jupyter/lab
+[I 2024-07-23 20:12:47.302 LabApp] Extension Manager is 'pypi'.
+[I 2024-07-23 20:12:47.384 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2024-07-23 20:12:47.390 ServerApp] notebook | extension was successfully loaded.
+[I 2024-07-23 20:12:47.391 ServerApp] Serving notebooks from local directory: /home/jv_isa4031/project_8
+[I 2024-07-23 20:12:47.391 ServerApp] Jupyter Server 2.14.2 is running at:
+[I 2024-07-23 20:12:47.391 ServerApp] http://vm-p8:5555/tree?token=f672bd759134b8da448dca9bd4252393352d03a74dcb981a
+[I 2024-07-23 20:12:47.391 ServerApp]     http://127.0.0.1:5555/tree?token=f672bd759134b8da448dca9bd4252393352d03a74dcb981a
+[I 2024-07-23 20:12:47.391 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 2024-07-23 20:12:47.396 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/jv_isa4031/.local/share/jupyter/runtime/jpserver-1682-open.html
+    Or copy and paste one of these URLs:
+        http://vm-p8:5555/tree?token=f672bd759134b8da448dca9bd4252393352d03a74dcb981a
+        http://127.0.0.1:5555/tree?token=f672bd759134b8da448dca9bd4252393352d03a74dcb981a
+[I 2024-07-23 20:12:47.417 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[W 2024-07-23 20:12:55.243 ServerApp] 404 GET /api/kernels/23e10abe-6071-49cf-a168-e4d60c0f4e5d?1721765575138 (37.170.172.156): Kernel does not exist: 23e10abe-6071-49cf-a168-e4d60c0f4e5d
+[W 2024-07-23 20:12:55.243 ServerApp] wrote error: 'Kernel does not exist: 23e10abe-6071-49cf-a168-e4d60c0f4e5d'
+    Traceback (most recent call last):
+      File "/home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+               ^^^^^^^^^
+      File "/home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/jupyter_server/services/kernels/handlers.py", line 75, in get
+        model = await ensure_async(km.kernel_model(kernel_id))
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 506, in kernel_model
+        self._check_kernel_id(kernel_id)
+      File "/home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 537, in _check_kernel_id
+        raise web.HTTPError(404, "Kernel does not exist: %s" % kernel_id)
+    tornado.web.HTTPError: HTTP 404: Not Found (Kernel does not exist: 23e10abe-6071-49cf-a168-e4d60c0f4e5d)
+[W 2024-07-23 20:12:55.249 ServerApp] 404 GET /api/kernels/23e10abe-6071-49cf-a168-e4d60c0f4e5d?1721765575138 (2cd8155ac0f24e8eb64e76ffc0fc4279@37.170.172.156) 7.70ms referer=http://34.155.188.3:5555/notebooks/server_mlflow.ipynb
+[W 2024-07-23 20:12:56.202 ServerApp] 404 GET /api/kernels/23e10abe-6071-49cf-a168-e4d60c0f4e5d/channels?session_id=8354cda7-cebc-49a5-9454-a9df4fca648d (37.170.172.156): Kernel does not exist: 23e10abe-6071-49cf-a168-e4d60c0f4e5d
+[W 2024-07-23 20:12:56.222 ServerApp] 404 GET /api/kernels/23e10abe-6071-49cf-a168-e4d60c0f4e5d/channels?session_id=8354cda7-cebc-49a5-9454-a9df4fca648d (2cd8155ac0f24e8eb64e76ffc0fc4279@37.170.172.156) 21.06ms referer=None
+[W 2024-07-23 20:12:56.262 ServerApp] 404 GET /api/kernels/23e10abe-6071-49cf-a168-e4d60c0f4e5d?1721765576247 (37.170.172.156): Kernel does not exist: 23e10abe-6071-49cf-a168-e4d60c0f4e5d
+[W 2024-07-23 20:12:56.262 ServerApp] wrote error: 'Kernel does not exist: 23e10abe-6071-49cf-a168-e4d60c0f4e5d'
+    Traceback (most recent call last):
+      File "/home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+               ^^^^^^^^^
+      File "/home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/jupyter_server/services/kernels/handlers.py", line 75, in get
+        model = await ensure_async(km.kernel_model(kernel_id))
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 506, in kernel_model
+        self._check_kernel_id(kernel_id)
+      File "/home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 537, in _check_kernel_id
+        raise web.HTTPError(404, "Kernel does not exist: %s" % kernel_id)
+    tornado.web.HTTPError: HTTP 404: Not Found (Kernel does not exist: 23e10abe-6071-49cf-a168-e4d60c0f4e5d)
+[W 2024-07-23 20:12:56.263 ServerApp] 404 GET /api/kernels/23e10abe-6071-49cf-a168-e4d60c0f4e5d?1721765576247 (2cd8155ac0f24e8eb64e76ffc0fc4279@37.170.172.156) 1.79ms referer=http://34.155.188.3:5555/notebooks/server_mlflow.ipynb
+[W 2024-07-23 20:12:58.202 ServerApp] 404 GET /api/kernels/23e10abe-6071-49cf-a168-e4d60c0f4e5d/channels?session_id=8354cda7-cebc-49a5-9454-a9df4fca648d (37.170.172.156): Kernel does not exist: 23e10abe-6071-49cf-a168-e4d60c0f4e5d
+[W 2024-07-23 20:12:58.204 ServerApp] 404 GET /api/kernels/23e10abe-6071-49cf-a168-e4d60c0f4e5d/channels?session_id=8354cda7-cebc-49a5-9454-a9df4fca648d (2cd8155ac0f24e8eb64e76ffc0fc4279@37.170.172.156) 2.12ms referer=None
+[W 2024-07-23 20:12:58.242 ServerApp] 404 GET /api/kernels/23e10abe-6071-49cf-a168-e4d60c0f4e5d?1721765578223 (37.170.172.156): Kernel does not exist: 23e10abe-6071-49cf-a168-e4d60c0f4e5d
+[W 2024-07-23 20:12:58.242 ServerApp] wrote error: 'Kernel does not exist: 23e10abe-6071-49cf-a168-e4d60c0f4e5d'
+    Traceback (most recent call last):
+      File "/home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+               ^^^^^^^^^
+      File "/home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/jupyter_server/services/kernels/handlers.py", line 75, in get
+        model = await ensure_async(km.kernel_model(kernel_id))
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 506, in kernel_model
+        self._check_kernel_id(kernel_id)
+      File "/home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 537, in _check_kernel_id
+        raise web.HTTPError(404, "Kernel does not exist: %s" % kernel_id)
+    tornado.web.HTTPError: HTTP 404: Not Found (Kernel does not exist: 23e10abe-6071-49cf-a168-e4d60c0f4e5d)
+[W 2024-07-23 20:12:58.243 ServerApp] 404 GET /api/kernels/23e10abe-6071-49cf-a168-e4d60c0f4e5d?1721765578223 (2cd8155ac0f24e8eb64e76ffc0fc4279@37.170.172.156) 2.06ms referer=http://34.155.188.3:5555/notebooks/server_mlflow.ipynb
+[W 2024-07-23 20:13:02.189 ServerApp] 404 GET /api/kernels/23e10abe-6071-49cf-a168-e4d60c0f4e5d/channels?session_id=8354cda7-cebc-49a5-9454-a9df4fca648d (37.170.172.156): Kernel does not exist: 23e10abe-6071-49cf-a168-e4d60c0f4e5d
+[W 2024-07-23 20:13:02.190 ServerApp] 404 GET /api/kernels/23e10abe-6071-49cf-a168-e4d60c0f4e5d/channels?session_id=8354cda7-cebc-49a5-9454-a9df4fca648d (2cd8155ac0f24e8eb64e76ffc0fc4279@37.170.172.156) 1.90ms referer=None
+[W 2024-07-23 20:13:02.242 ServerApp] 404 GET /api/kernels/23e10abe-6071-49cf-a168-e4d60c0f4e5d?1721765582221 (37.170.172.156): Kernel does not exist: 23e10abe-6071-49cf-a168-e4d60c0f4e5d
+[W 2024-07-23 20:13:02.242 ServerApp] wrote error: 'Kernel does not exist: 23e10abe-6071-49cf-a168-e4d60c0f4e5d'
+    Traceback (most recent call last):
+      File "/home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+               ^^^^^^^^^
+      File "/home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/jupyter_server/services/kernels/handlers.py", line 75, in get
+        model = await ensure_async(km.kernel_model(kernel_id))
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 506, in kernel_model
+        self._check_kernel_id(kernel_id)
+      File "/home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 537, in _check_kernel_id
+        raise web.HTTPError(404, "Kernel does not exist: %s" % kernel_id)
+    tornado.web.HTTPError: HTTP 404: Not Found (Kernel does not exist: 23e10abe-6071-49cf-a168-e4d60c0f4e5d)
+[W 2024-07-23 20:13:02.243 ServerApp] 404 GET /api/kernels/23e10abe-6071-49cf-a168-e4d60c0f4e5d?1721765582221 (2cd8155ac0f24e8eb64e76ffc0fc4279@37.170.172.156) 1.78ms referer=http://34.155.188.3:5555/notebooks/server_mlflow.ipynb
+[W 2024-07-23 20:13:16.202 ServerApp] 404 GET /api/kernels/23e10abe-6071-49cf-a168-e4d60c0f4e5d/channels?session_id=8354cda7-cebc-49a5-9454-a9df4fca648d (37.170.172.156): Kernel does not exist: 23e10abe-6071-49cf-a168-e4d60c0f4e5d
+[W 2024-07-23 20:13:16.203 ServerApp] 404 GET /api/kernels/23e10abe-6071-49cf-a168-e4d60c0f4e5d/channels?session_id=8354cda7-cebc-49a5-9454-a9df4fca648d (2cd8155ac0f24e8eb64e76ffc0fc4279@37.170.172.156) 1.89ms referer=None
+[W 2024-07-23 20:13:16.242 ServerApp] 404 GET /api/kernels/23e10abe-6071-49cf-a168-e4d60c0f4e5d?1721765596223 (37.170.172.156): Kernel does not exist: 23e10abe-6071-49cf-a168-e4d60c0f4e5d
+[W 2024-07-23 20:13:16.242 ServerApp] wrote error: 'Kernel does not exist: 23e10abe-6071-49cf-a168-e4d60c0f4e5d'
+    Traceback (most recent call last):
+      File "/home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+               ^^^^^^^^^
+      File "/home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/jupyter_server/services/kernels/handlers.py", line 75, in get
+        model = await ensure_async(km.kernel_model(kernel_id))
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 506, in kernel_model
+        self._check_kernel_id(kernel_id)
+      File "/home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 537, in _check_kernel_id
+        raise web.HTTPError(404, "Kernel does not exist: %s" % kernel_id)
+    tornado.web.HTTPError: HTTP 404: Not Found (Kernel does not exist: 23e10abe-6071-49cf-a168-e4d60c0f4e5d)
+[W 2024-07-23 20:13:16.244 ServerApp] 404 GET /api/kernels/23e10abe-6071-49cf-a168-e4d60c0f4e5d?1721765596223 (2cd8155ac0f24e8eb64e76ffc0fc4279@37.170.172.156) 2.21ms referer=http://34.155.188.3:5555/notebooks/server_mlflow.ipynb
+[W 2024-07-23 20:13:25.202 ServerApp] 404 GET /api/kernels/23e10abe-6071-49cf-a168-e4d60c0f4e5d/channels?session_id=8354cda7-cebc-49a5-9454-a9df4fca648d (37.170.172.156): Kernel does not exist: 23e10abe-6071-49cf-a168-e4d60c0f4e5d
+[W 2024-07-23 20:13:25.203 ServerApp] 404 GET /api/kernels/23e10abe-6071-49cf-a168-e4d60c0f4e5d/channels?session_id=8354cda7-cebc-49a5-9454-a9df4fca648d (2cd8155ac0f24e8eb64e76ffc0fc4279@37.170.172.156) 1.66ms referer=None
+[W 2024-07-23 20:13:25.242 ServerApp] 404 GET /api/kernels/23e10abe-6071-49cf-a168-e4d60c0f4e5d?1721765605222 (37.170.172.156): Kernel does not exist: 23e10abe-6071-49cf-a168-e4d60c0f4e5d
+[W 2024-07-23 20:13:25.242 ServerApp] wrote error: 'Kernel does not exist: 23e10abe-6071-49cf-a168-e4d60c0f4e5d'
+    Traceback (most recent call last):
+      File "/home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+               ^^^^^^^^^
+      File "/home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/jupyter_server/services/kernels/handlers.py", line 75, in get
+        model = await ensure_async(km.kernel_model(kernel_id))
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 506, in kernel_model
+        self._check_kernel_id(kernel_id)
+      File "/home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 537, in _check_kernel_id
+        raise web.HTTPError(404, "Kernel does not exist: %s" % kernel_id)
+    tornado.web.HTTPError: HTTP 404: Not Found (Kernel does not exist: 23e10abe-6071-49cf-a168-e4d60c0f4e5d)
+[W 2024-07-23 20:13:25.243 ServerApp] 404 GET /api/kernels/23e10abe-6071-49cf-a168-e4d60c0f4e5d?1721765605222 (2cd8155ac0f24e8eb64e76ffc0fc4279@37.170.172.156) 1.68ms referer=http://34.155.188.3:5555/notebooks/server_mlflow.ipynb
+[W 2024-07-23 20:14:04.202 ServerApp] 404 GET /api/kernels/23e10abe-6071-49cf-a168-e4d60c0f4e5d/channels?session_id=8354cda7-cebc-49a5-9454-a9df4fca648d (37.170.172.156): Kernel does not exist: 23e10abe-6071-49cf-a168-e4d60c0f4e5d
+[W 2024-07-23 20:14:04.203 ServerApp] 404 GET /api/kernels/23e10abe-6071-49cf-a168-e4d60c0f4e5d/channels?session_id=8354cda7-cebc-49a5-9454-a9df4fca648d (2cd8155ac0f24e8eb64e76ffc0fc4279@37.170.172.156) 1.45ms referer=None
+[W 2024-07-23 20:14:04.242 ServerApp] 404 GET /api/kernels/23e10abe-6071-49cf-a168-e4d60c0f4e5d?1721765644218 (37.170.172.156): Kernel does not exist: 23e10abe-6071-49cf-a168-e4d60c0f4e5d
+[W 2024-07-23 20:14:04.242 ServerApp] wrote error: 'Kernel does not exist: 23e10abe-6071-49cf-a168-e4d60c0f4e5d'
+    Traceback (most recent call last):
+      File "/home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+               ^^^^^^^^^
+      File "/home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/jupyter_server/services/kernels/handlers.py", line 75, in get
+        model = await ensure_async(km.kernel_model(kernel_id))
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 506, in kernel_model
+        self._check_kernel_id(kernel_id)
+      File "/home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 537, in _check_kernel_id
+        raise web.HTTPError(404, "Kernel does not exist: %s" % kernel_id)
+    tornado.web.HTTPError: HTTP 404: Not Found (Kernel does not exist: 23e10abe-6071-49cf-a168-e4d60c0f4e5d)
+[W 2024-07-23 20:14:04.243 ServerApp] 404 GET /api/kernels/23e10abe-6071-49cf-a168-e4d60c0f4e5d?1721765644218 (2cd8155ac0f24e8eb64e76ffc0fc4279@37.170.172.156) 1.50ms referer=http://34.155.188.3:5555/notebooks/server_mlflow.ipynb
+[I 2024-07-23 20:15:21.876 ServerApp] Shutting down on /api/shutdown request.
+[I 2024-07-23 20:15:21.877 ServerApp] Shutting down 5 extensions
+[I 2024-07-23 20:15:50.378 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2024-07-23 20:15:50.383 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2024-07-23 20:15:50.388 ServerApp] jupyterlab | extension was successfully linked.
+[I 2024-07-23 20:15:50.393 ServerApp] notebook | extension was successfully linked.
+[I 2024-07-23 20:15:50.682 ServerApp] notebook_shim | extension was successfully linked.
+[I 2024-07-23 20:15:50.770 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2024-07-23 20:15:50.773 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2024-07-23 20:15:50.775 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2024-07-23 20:15:50.777 LabApp] JupyterLab extension loaded from /home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/jupyterlab
+[I 2024-07-23 20:15:50.777 LabApp] JupyterLab application directory is /home/jv_isa4031/project_8/my_env/share/jupyter/lab
+[I 2024-07-23 20:15:50.778 LabApp] Extension Manager is 'pypi'.
+[I 2024-07-23 20:15:50.857 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2024-07-23 20:15:50.863 ServerApp] notebook | extension was successfully loaded.
+[I 2024-07-23 20:15:50.864 ServerApp] Serving notebooks from local directory: /home/jv_isa4031/project_8
+[I 2024-07-23 20:15:50.864 ServerApp] Jupyter Server 2.14.2 is running at:
+[I 2024-07-23 20:15:50.864 ServerApp] http://vm-p8:5555/tree?token=04975218529f39d045c1d4d7d5d139a784b3e3c13a55f375
+[I 2024-07-23 20:15:50.864 ServerApp]     http://127.0.0.1:5555/tree?token=04975218529f39d045c1d4d7d5d139a784b3e3c13a55f375
+[I 2024-07-23 20:15:50.864 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 2024-07-23 20:15:50.868 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/jv_isa4031/.local/share/jupyter/runtime/jpserver-1718-open.html
+    Or copy and paste one of these URLs:
+        http://vm-p8:5555/tree?token=04975218529f39d045c1d4d7d5d139a784b3e3c13a55f375
+        http://127.0.0.1:5555/tree?token=04975218529f39d045c1d4d7d5d139a784b3e3c13a55f375
+[I 2024-07-23 20:15:50.889 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[I 2024-07-23 20:16:10.721 ServerApp] Shutting down on /api/shutdown request.
+[I 2024-07-23 20:16:10.721 ServerApp] Shutting down 5 extensions
+[I 2024-07-23 20:16:24.333 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2024-07-23 20:16:24.338 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2024-07-23 20:16:24.343 ServerApp] jupyterlab | extension was successfully linked.
+[I 2024-07-23 20:16:24.347 ServerApp] notebook | extension was successfully linked.
+[I 2024-07-23 20:16:24.639 ServerApp] notebook_shim | extension was successfully linked.
+[I 2024-07-23 20:16:24.730 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2024-07-23 20:16:24.734 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2024-07-23 20:16:24.735 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2024-07-23 20:16:24.738 LabApp] JupyterLab extension loaded from /home/jv_isa4031/project_8/my_env/lib/python3.11/site-packages/jupyterlab
+[I 2024-07-23 20:16:24.738 LabApp] JupyterLab application directory is /home/jv_isa4031/project_8/my_env/share/jupyter/lab
+[I 2024-07-23 20:16:24.739 LabApp] Extension Manager is 'pypi'.
+[I 2024-07-23 20:16:24.818 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2024-07-23 20:16:24.825 ServerApp] notebook | extension was successfully loaded.
+[I 2024-07-23 20:16:24.826 ServerApp] Serving notebooks from local directory: /home/jv_isa4031/project_8
+[I 2024-07-23 20:16:24.826 ServerApp] Jupyter Server 2.14.2 is running at:
+[I 2024-07-23 20:16:24.826 ServerApp] http://vm-p8:5555/tree?token=11df2559a59fa4988ccfc0766b5b2c213d047188ef0dfc3c
+[I 2024-07-23 20:16:24.826 ServerApp]     http://127.0.0.1:5555/tree?token=11df2559a59fa4988ccfc0766b5b2c213d047188ef0dfc3c
+[I 2024-07-23 20:16:24.826 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 2024-07-23 20:16:24.830 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/jv_isa4031/.local/share/jupyter/runtime/jpserver-1738-open.html
+    Or copy and paste one of these URLs:
+        http://vm-p8:5555/tree?token=11df2559a59fa4988ccfc0766b5b2c213d047188ef0dfc3c
+        http://127.0.0.1:5555/tree?token=11df2559a59fa4988ccfc0766b5b2c213d047188ef0dfc3c
+[I 2024-07-23 20:16:24.853 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[W 2024-07-23 20:22:37.927 ServerApp] Notebook server_mlflow.ipynb is not trusted
+[I 2024-07-23 20:22:38.703 ServerApp] Kernel started: 7cb1032d-63a8-4550-afe9-0e0f2782c7a4
+[I 2024-07-23 20:22:39.341 ServerApp] Connecting to kernel 7cb1032d-63a8-4550-afe9-0e0f2782c7a4.
+[I 2024-07-23 20:22:39.425 ServerApp] Connecting to kernel 7cb1032d-63a8-4550-afe9-0e0f2782c7a4.
+[I 2024-07-23 20:22:39.527 ServerApp] Connecting to kernel 7cb1032d-63a8-4550-afe9-0e0f2782c7a4.
+[I 2024-07-23 20:22:41.277 ServerApp] Connecting to kernel 7cb1032d-63a8-4550-afe9-0e0f2782c7a4.
+[I 2024-07-23 20:23:23.929 ServerApp] Starting buffering for 7cb1032d-63a8-4550-afe9-0e0f2782c7a4:3d6d9547-ac4c-44c6-8a9c-60201a8ba221
