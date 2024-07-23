@@ -78,7 +78,7 @@ def get_li_scores(df_data_sample) :
 		str_curl = str_curl.replace('"', '\\"').replace('\'', '"')
 	
 	str_dict_predictions = subprocess.run(str_curl, shell=True, stdout=subprocess.PIPE, text=True).stdout 
-	#st.warning('str_dict_predictions=[' + str_dict_predictions + ']')
+	st.warning('str_dict_predictions=[' + str_dict_predictions + ']')
 	dict_predictions	 = eval(str_dict_predictions) # {"predictions": [0]}
 	li_predictions	   = dict_predictions['predictions']
 	return li_predictions
