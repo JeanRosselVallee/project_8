@@ -26,7 +26,7 @@ st.sidebar.markdown(
 	- [Web App URL](https://project8-ocr.streamlit.app/)
 	- [GitHub Repository](https://github.com/JeanRosselVallee/project_8)
 	''')
-st.sidebar.success("Success message")
+st.sidebar.markdown('[Streamlit Cheat-Sheet](https://cheat-sheet.streamlit.app/)')
 
 
 # ================================= Main Frame ================
