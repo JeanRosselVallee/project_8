@@ -1,3 +1,4 @@
+source ~/project_8/my_env/bin/activate
 nohup jupyter notebook --no-browser  --ip=0.0.0.0 --port=5555 &
 sleep 1
 jupyter notebook list
