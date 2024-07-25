@@ -51,10 +51,6 @@ frame_L.markdown(
 ### Instructions
 On the Sidebar, 
 - Click on a page name
-
-### To Do's
-- Number pages
-1. Select a client's application for credit
 - Select the reference of the customer's credit application
 
 '''
