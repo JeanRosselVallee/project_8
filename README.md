@@ -11,3 +11,5 @@
 # Context :
 - There are 2 classes of borrowers depending on the probability to repay a debt
 - The approval of the application relies on this probability
+
+For more details, check this [presentation of the project](docs/Vallée_Jean_4_présentation_072024.pdf)
