@@ -13,3 +13,4 @@
 - The approval of the application relies on this probability
 
 For more details, check this [presentation of the project](docs/Vallée_Jean_4_présentation_072024.pdf)
+Try the app at [StreamLit](https://project8-dashboard.streamlit.app/)
