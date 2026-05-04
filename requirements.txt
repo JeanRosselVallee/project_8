@@ -6,3 +6,4 @@ shap==0.45.1
 python-dotenv
 streamlit
 matplotlib
+plotly
