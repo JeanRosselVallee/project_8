@@ -32,6 +32,7 @@ Try the app at [StreamLit](https://project8-dashboard.streamlit.app/)
 		 -ContentType "application/json" `
 		 -Body '{"dataframe_split": {"columns":["CODE_GENDER_M","EXT_SOURCE_3","EXT_SOURCE_2","NAME_EDUCATION_TYPE_Secondary_or_secondary_special","NAME_EDUCATION_TYPE_Higher_education","NAME_CONTRACT_TYPE_Cash_loans","NAME_INCOME_TYPE_Working"],"index":[2011],"data":[[0,0.5989262183,0.1461036398,1,0,1,1]]}}'
 		```
+- Check GCP [Billing](https://console.cloud.google.com/billing/0136C7-720E0A-C5CEC6/reports;credits=NONE;negotiatedSavings=false?project=ocr-p8-dashboard)
 - FontEnd on StreamLit
 	- Login with GitHub
  	- Go to [apps list](https://share.streamlit.io/)
