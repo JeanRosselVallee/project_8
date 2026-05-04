@@ -27,11 +27,12 @@ sudo apt-get install python3-pip
 sudo apt install python3.11-venv
 python3 -m venv ./my_env
 source ./my_env/bin/activate
-pip install -r requirements.txt
+pip install --no-cache-dir -r requirements_backend.txt
 
 ls
 cd shl
 ls
+deactivate
 ./launch_mlflow.sh 
 cat ./launch_mlflow.sh 
 curl -d'{"dataframe_split": {"columns":["CODE_GENDER_M","EXT_SOURCE_3","EXT_SOURCE_2","NAME_EDUCATION_TYPE_Secondary_or_secondary_special","NAME_EDUCATION_TYPE_Higher_education","NAME_CONTRACT_TYPE_Cash_loans","NAME_INCOME_TYPE_Working"],"index":[2011],"data":[[0,0.5989262183,0.1461036398,1,0,1,1]]}}' -H 'Content-Type: application/json' -X POST localhost:5677/invocations
