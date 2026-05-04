@@ -7,6 +7,7 @@ import subprocess
 import shap
 import matplotlib.pyplot as plt
 import platform
+import os
 
 from dotenv import load_dotenv
 
