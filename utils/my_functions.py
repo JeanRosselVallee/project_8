@@ -8,6 +8,8 @@ import shap
 import matplotlib.pyplot as plt
 import platform
 
+from dotenv import load_dotenv
+
 # Get Host IP from env/secrets
 localhost = '127.0.0.1'
 load_dotenv()  # load .env file contents
