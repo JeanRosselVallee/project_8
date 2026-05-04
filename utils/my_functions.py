@@ -8,9 +8,11 @@ import shap
 import matplotlib.pyplot as plt
 import platform
 
-# Variables
-#host = 'http://34.155.188.3'
-host = 'http://34.155.179.123'
+# Get Host IP from env/secrets
+localhost = '127.0.0.1'
+load_dotenv()  # load .env file contents
+host_env = os.getenv("MODEL_SERVER_IP", localhost)  # host from env file
+host = st.secrets.get("MODEL_SERVER_IP", host_env)  # from SL Secrets
 
 # Debug Text
 def debug(str_debug) :
