@@ -10,7 +10,7 @@ import platform
 
 # Variables
 #host = 'http://34.155.188.3'
-host = 'http://35.201.127.49'
+host = 'http://34.155.179.123'
 
 # Debug Text
 def debug(str_debug) :
