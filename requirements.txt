@@ -4,4 +4,5 @@ streamlit
 shap
 plotly
 matplotlib
+mlflow
 python-dotenv
