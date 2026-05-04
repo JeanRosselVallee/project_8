@@ -4,3 +4,4 @@ streamlit
 shap
 plotly
 matplotlib
+python-dotenv
