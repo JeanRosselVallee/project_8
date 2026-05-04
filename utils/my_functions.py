@@ -9,7 +9,8 @@ import matplotlib.pyplot as plt
 import platform
 
 # Variables
-host = 'http://34.155.188.3'
+#host = 'http://34.155.188.3'
+host = 'http://35.201.127.49'
 
 # Debug Text
 def debug(str_debug) :
