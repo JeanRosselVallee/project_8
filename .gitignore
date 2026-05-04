@@ -14,3 +14,4 @@ data/out/shap_violins.png
 data/out/shap_violins.png
 log/streamlit_app.log
 utils/__pycache__/my_functions.cpython-310.pyc
+.env
