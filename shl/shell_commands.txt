@@ -1,0 +1,88 @@
+=========================  Git Repo  ========================
+ls
+sudo apt install git
+git clone https://github.com/JeanRosselVallee/project_8
+git status
+git config --global user.email "jv.isa4031@gmail.com" 
+git config --global user.name "JeanRosselVallee"
+git remote rm origin
+# HTTPS URL with Personal Access Token (PAT)
+# Generate a New Token at GitHub
+# git remote add origin https://USERNAME:TOKEN@github.com/USERNAME/REPO_NAME.git
+git remote -v
+git checkout server_mlflow.ipynb
+git pull origin main
+git status
+git add .
+git commit -m "+ script shell launch_jupyter.sh"
+git reset HEAD~1 
+git push origin main
+
+===========================  Launch  ========================
+ls
+cd project_8/
+ls
+cd shl
+ls
+./launch_mlflow.sh 
+cat ./launch_mlflow.sh 
+curl -d'{"dataframe_split": {"columns":["CODE_GENDER_M","EXT_SOURCE_3","EXT_SOURCE_2","NAME_EDUCATION_TYPE_Secondary_or_secondary_special","NAME_EDUCATION_TYPE_Higher_education","NAME_CONTRACT_TYPE_Cash_loans","NAME_INCOME_TYPE_Working"],"index":[2011],"data":[[0,0.5989262183,0.1461036398,1,0,1,1]]}}' -H 'Content-Type: application/json' -X POST localhost:5677/invocations
+pwd
+ls -l
+cd project_8/
+cd shl
+cd project_8/
+cd shl
+./launch_mlflow.sh 
+ps -aux | grep flow
+
+===========================  Misc  ==========================
+ls -a 
+export PATH="/usr/bin:$PATH"
+sudo apt-get install python3-pip
+sudo apt install python3.11-venv
+python3 -m venv ./my_env
+source ./my_env/bin/activate
+
+pip3 install jupyter
+chmod +x launch_jupyter.sh
+./launch_jupyter.sh 
+nohup jupyter notebook --no-browser  --ip=0.0.0.0 --port=5677 &
+nohup jupyter notebook --no-browser  --ip=0.0.0.0 --port=5555 &
+jupyter notebook list
+jupyter notebook --version
+sudo service jupyter status
+sudo journalctl -u jupyter.service --no-pager
+
+cat nohup.out 
+
+netstat tuln | grep 5677
+sudo netstat tuln 
+sudo netstat tuln | grep 567
+ss tuln 
+ss -tuln | grep 567
+ss -tuln | grep 5555
+
+ps aux | grep jupy | grep -v grep 
+pkill -f jupy
+pkill -f 3534
+
+./project_8/shl/launch_mlflow.sh
+source ~/project_8/my_env/bin/activate
+cd project_8/
+ls
+chmod +x shl/launch_mlflow.sh 
+chmod +x  stop_processes.sh
+source ./my_env/bin/activate
+./shl/launch_mlflow.sh 
+ps aux | grep mlflow
+ps aux | grep "scoring_server" | grep -v "grep" | awk '{print $2, $15, $19}'
+pkill -f ":5677"
+nohup mlflow models serve -m ../data/model/ -p 5677 -h 0.0.0.0 --no-conda &
+pkill -f ":5677"
+nohup mlflow models serve -m ~/project_8/data/model/ -p 5677 -h 0.0.0.0 --no-conda &
+source ~/project_8/my_env/bin/activate
+nohup mlflow models serve -m ~/project_8/data/model/ -p 5677 -h 0.0.0.0 --no-conda &
+
+find ./ -name server_mlflow.ipynb
+find . -name *violins*
