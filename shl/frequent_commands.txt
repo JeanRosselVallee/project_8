@@ -2,6 +2,7 @@
 ls
 sudo apt install git
 git clone https://github.com/JeanRosselVallee/project_8
+
 git status
 git config --global user.email "jv.isa4031@gmail.com" 
 git config --global user.name "JeanRosselVallee"
@@ -21,6 +22,13 @@ git push origin main
 ===========================  Launch  ========================
 ls
 cd project_8/
+export PATH="/usr/bin:$PATH"
+sudo apt-get install python3-pip
+sudo apt install python3.11-venv
+python3 -m venv ./my_env
+source ./my_env/bin/activate
+pip install -r requirements.txt
+
 ls
 cd shl
 ls
@@ -38,11 +46,6 @@ ps -aux | grep flow
 
 ===========================  Misc  ==========================
 ls -a 
-export PATH="/usr/bin:$PATH"
-sudo apt-get install python3-pip
-sudo apt install python3.11-venv
-python3 -m venv ./my_env
-source ./my_env/bin/activate
 
 pip3 install jupyter
 chmod +x launch_jupyter.sh
@@ -73,7 +76,6 @@ cd project_8/
 ls
 chmod +x shl/launch_mlflow.sh 
 chmod +x  stop_processes.sh
-source ./my_env/bin/activate
 ./shl/launch_mlflow.sh 
 ps aux | grep mlflow
 ps aux | grep "scoring_server" | grep -v "grep" | awk '{print $2, $15, $19}'
